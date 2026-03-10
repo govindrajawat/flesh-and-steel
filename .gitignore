@@ -1,0 +1,19 @@
+# Compiled Python (clutter)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large Build Files (Do NOT upload these)
+server_mods/
+flesh-and-steel-server/
+*.mrpack
+*.zip
+
+# Temporary log files and search results (keeps repo clean)
+*.txt
+*.log
+build_output.txt
+
+# OS stuff
+.DS_Store
+Thumb.db

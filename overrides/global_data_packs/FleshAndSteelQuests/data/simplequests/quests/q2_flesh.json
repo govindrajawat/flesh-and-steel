@@ -1,0 +1,21 @@
+{
+  "name": "Harvesting the Flesh",
+  "category": "flesh_and_steel",
+  "description": [
+    "Harvesting rotten flesh will be key to survival."
+  ],
+  "tasks": [
+    {
+      "type": "simplequests:item",
+      "predicate": {
+        "items": [
+          "minecraft:rotten_flesh"
+        ]
+      },
+      "amount": 32
+    }
+  ],
+  "loot_table": "minecraft:chests/simple_dungeon",
+  "icon": "minecraft:rotten_flesh",
+  "parent": "simplequests:q1_start"
+}

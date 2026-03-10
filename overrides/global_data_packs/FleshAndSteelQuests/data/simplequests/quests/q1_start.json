@@ -1,0 +1,21 @@
+{
+  "name": "The Beginning of the End",
+  "category": "flesh_and_steel",
+  "description": [
+    "Welcome to Flesh & Steel.",
+    "Your first task: gather the basic materials for survival."
+  ],
+  "tasks": [
+    {
+      "type": "simplequests:item",
+      "predicate": {
+        "items": [
+          "minecraft:log"
+        ]
+      },
+      "amount": 16
+    }
+  ],
+  "loot_table": "minecraft:chests/village/village_toolsmith",
+  "icon": "minecraft:iron_pickaxe"
+}

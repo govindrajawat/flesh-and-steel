@@ -1,0 +1,22 @@
+{
+  "name": "The Spark of Creation",
+  "category": "flesh_and_steel",
+  "description": [
+    "The Create mod allows you to automate everything.",
+    "Craft your first Andesite Alloy."
+  ],
+  "tasks": [
+    {
+      "type": "simplequests:item",
+      "predicate": {
+        "items": [
+          "create:andesite_alloy"
+        ]
+      },
+      "amount": 8
+    }
+  ],
+  "loot_table": "minecraft:chests/abandoned_mineshaft",
+  "icon": "create:andesite_alloy",
+  "parent": "simplequests:q1_start"
+}
