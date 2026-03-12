@@ -50,7 +50,7 @@ with zipfile.ZipFile(io.BytesIO(jar_data), "r") as zin:
                 
             zout.writestr(item, content)
 
-os.makedirs("overrides/mods", exist_ok=True)
-with open("overrides/mods/neepmeat-0.25.3-fixed.jar", "wb") as f:
+os.makedirs("mods/common", exist_ok=True)
+with open("mods/common/neepmeat-0.25.3-fixed.jar", "wb") as f:
     f.write(out_buffer.getvalue())
-print("Saved patched neepmeat to overrides/mods/neepmeat-0.25.3-fixed.jar")
+print("Saved patched neepmeat to mods/common/neepmeat-0.25.3-fixed.jar")

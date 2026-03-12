@@ -1,0 +1,91 @@
+name: Release Modpack
+
+on:
+  push:
+    tags:
+      - "v*.*.*"   # Triggers on tags like v1.0.0, v1.2.3, etc.
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v1.0.0)"
+        required: true
+
+jobs:
+  build-and-release:
+    name: Build & Publish
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Python ────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── Build both packs ──────────────────────────────────
+      - name: Build client .mrpack and server .zip
+        run: python build_pack.py
+
+      # ── Determine release tag ─────────────────────────────
+      - name: Resolve release tag
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "value=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ── Read pack version from mods.json ──────────────────
+      - name: Read pack version
+        id: pack
+        run: |
+          VERSION=$(python - <<'EOF'
+          import json, pathlib
+          cfg = json.loads(pathlib.Path("pack-config/mods.json").read_text())
+          print(cfg["pack_version"])
+          EOF
+          )
+          MC=$(python - <<'EOF'
+          import json, pathlib
+          cfg = json.loads(pathlib.Path("pack-config/mods.json").read_text())
+          print(cfg["minecraft_version"])
+          EOF
+          )
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "mc_version=$MC"   >> "$GITHUB_OUTPUT"
+
+      # ── Create GitHub Release & upload artifacts ──────────
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.value }}
+          name: "Flesh & Steel ${{ steps.tag.outputs.value }}"
+          body: |
+            ## Flesh & Steel — ${{ steps.tag.outputs.value }}
+
+            **Minecraft:** ${{ steps.pack.outputs.mc_version }}
+            **Pack version:** ${{ steps.pack.outputs.version }}
+
+            ### Downloads
+            | File | Description |
+            |------|-------------|
+            | `flesh-and-steel.mrpack` | Client pack — import into [Modrinth App](https://modrinth.com/app) or [Prism Launcher](https://prismlauncher.org/) |
+            | `flesh-and-steel-server-mods.zip` | Server mods — see `README.md` inside the server pack for setup instructions |
+
+            ### Server setup
+            Extract the server pack and run `./install.sh` to get started.
+          files: |
+            build/client-pack/flesh-and-steel.mrpack
+            build/server-pack/flesh-and-steel-server-mods.zip
+          fail_on_unmatched_files: true
+          generate_release_notes: false
+
