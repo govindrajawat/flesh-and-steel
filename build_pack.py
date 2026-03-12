@@ -241,11 +241,15 @@ def build_server_pack(config, project_root, output_dir):
             if f.is_file():
                 shutil.copy2(f, output_dir / f.name)
 
-    # Create a server mods zip
-    zip_path = output_dir / "flesh-and-steel-server-mods.zip"
+    # Zip the entire server pack directory (sits next to it, not inside)
+    zip_path = output_dir.parent / "flesh-and-steel-server.zip"
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
-        for jar in sorted(server_mods_dest.glob("*.jar")):
-            zf.write(jar, arcname=f"mods/{jar.name}")
+        for root, _, files in os.walk(output_dir):
+            for fn in files:
+                file_path = Path(root) / fn
+                arcname = file_path.relative_to(output_dir)
+                zf.write(file_path, arcname=arcname)
+    return zip_path
 
 
 def main():
@@ -306,8 +310,8 @@ def main():
 
     # Build server pack
     print("\n📦 Building server pack...")
-    build_server_pack(config, PROJECT_ROOT, server_pack_dir)
-    print(f"  ✅ {server_pack_dir}")
+    server_zip_path = build_server_pack(config, PROJECT_ROOT, server_pack_dir)
+    print(f"  ✅ {server_zip_path}")
 
     # Write build log
     log_path = build_dir / "install-log.txt"
@@ -317,7 +321,7 @@ def main():
     print(f"\n{'=' * 50}")
     print("✅ Build complete!")
     print(f"   Client pack: {mrpack_path}")
-    print(f"   Server pack: {server_pack_dir}")
+    print(f"   Server pack: {server_zip_path}")
     print(f"   Build log:   {log_path}")
     print(f"{'=' * 50}")
 
