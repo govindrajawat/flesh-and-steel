@@ -61,14 +61,9 @@ PlayerEvents.loggedIn((event) => {
         player.give('16x minecraft:cooked_beef');
         player.give('32x minecraft:torch');
         player.give('simplyswords:iron_katana');
-        player.give('minecraft:shield');
-        player.give('pointblank:m1911');
-        player.give('64x pointblank:9mm');
         player.give('travelersbackpack:standard');
 
         // A note explaining the pack
         player.tell(Text.green('Welcome to Flesh & Steel!'));
-        player.tell(Text.yellow('Explore the world - structures are everywhere!'));
-        player.tell(Text.gray('Use your Explorer\'s Compass to find structures nearby.'));
     }
 });
