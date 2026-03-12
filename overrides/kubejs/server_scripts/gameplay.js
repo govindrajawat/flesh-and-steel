@@ -60,11 +60,11 @@ PlayerEvents.loggedIn((event) => {
         // Give players a starter kit to begin exploring
         player.give('16x minecraft:cooked_beef');
         player.give('32x minecraft:torch');
-        player.give('minecraft:iron_sword');
-        player.give('minecraft:iron_pickaxe');
-        player.give('explorerscompass:explorers_compass');
-        player.give('immersive-guns:revolver');
-        player.give('12x immersive-guns:revolver_ammo');
+        player.give('simplyswords:iron_katana');
+        player.give('minecraft:shield');
+        player.give('pointblank:m1911');
+        player.give('64x pointblank:9mm');
+        player.give('travelersbackpack:standard');
 
         // A note explaining the pack
         player.tell(Text.green('Welcome to Flesh & Steel!'));

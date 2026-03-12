@@ -27,11 +27,14 @@ MOD_LIST = [
     ("createaddition", "Create Crafts & Additions"),
     ("create-deco", "Create Deco"),
     ("create-enchantment-industry-fabric-legacy", "Create Enchantment Industry"),
+    ("create-big-cannons", "Create Big Cannons"),
+    ("create-steam-n-rails", "Create: Steam 'n' Rails"),
     
     # COMBAT & WEAPONS
     ("bettercombat", "Better Combat"),
     ("simplyswords", "Simply Swords"),
-    ("immersive-guns", "Immersive Guns"),
+    ("vics-point-blank", "Vic's Point Blank"),
+    ("zenith", "Zenith (Apotheosis Fabric)"),
     ("artifacts", "Artifacts"),
     ("carry-on", "Carry On"),
     ("nyfsspiders", "Nyf's Spiders"),
@@ -43,13 +46,14 @@ MOD_LIST = [
     ("waystones", "Waystones"),
     ("travelersbackpack", "Traveler's Backpack"),
     ("veinmining", "Vein Mining"),
+    ("sparsestructures", "Sparse Structures (Configure Rarity)"),
 
     # STRUCTURES & DUNGEONS
     ("dungeons_arise", "When Dungeons Arise"),
     ("explorify", "Explorify"),
     ("dungeons-and-taverns", "Dungeons and Taverns"),
     ("integrated_stronghold", "Integrated Stronghold"),
-    ("integrated_api", "Integrated API"),
+    ("integrated-api", "Integrated API"),
     ("repurposed-structures-fabric", "Repurposed Structures"),
     ("create-structures", "Create: Structures"),
     ("graveyard", "The Graveyard (Fabric)"),
@@ -81,8 +85,6 @@ MOD_LIST = [
     ("rotnputrid", "Rot N' Putrid"),
     ("flesh-to-leather", "Flesh to Leather"),
     ("forsaken_corpses", "Forsaken Corpses"),
-    ("gigeresque", "Gigeresque"),
-    ("somatogenesis", "Somatogenesis"),
     ("farmers-delight-refabricated", "Farmer's Delight (Fabric)"),
     ("natures-spirit", "Nature's Spirit"),
     ("biobutchers-delight", "BioButcher's Delight"),
@@ -91,16 +93,25 @@ MOD_LIST = [
     ("bosses_of_mass_destruction", "Bosses of Mass Destruction"),
     ("mutantmonsters", "Mutant Monsters"),
     ("zombie-awareness", "Zombie Awareness"),
+    ("creeper-overhaul", "Creeper Overhaul"),
+    ("naturalist", "Naturalist"),
 
     # ELDRITCH & OCCULT THEME
     ("eldritch-mobs", "Eldritch Mobs"),
     ("spectrum", "Spectrum (Otherworldly Magic)"),
-    ("tftg", "The Flesh That Grows"),
     ("whisperwoods", "Whisperwoods (Creepy Mobs)"),
+    ("deeperdarker", "Deeper and Darker"),
+    ("cave-dweller-fabric", "Cave Dweller Fabric"),
+    ("the-man-from-the-fog-fabric", "The Man From The Fog"),
+    ("from-the-fog", "From The Fog"),
+    ("somatogenesis", "Somatogenesis (Bio-Engineering)"),
+    ("gigeresque", "Gigeresque (Biomechanical Horror)"),
 
     # ECONOMY & PROGRESSION
     ("numismatics", "Numismatics"),
     ("origins", "Origins"),
+    ("playerex-directors-cut", "PlayerEx (RPG Leveling)"),
+    ("relicex-directors-cut", "RelicEx (Lootable Relics)"),
 
     # SURVIVAL QOL
     ("universal-graves", "Universal Graves"),
@@ -117,6 +128,8 @@ MOD_LIST = [
     ("effective", "Effective"),
     ("supplementaries", "Supplementaries"),
     ("amendments", "Amendments"),
+    ("immersive-aircraft", "Immersive Aircraft"),
+    ("immersive-armors", "Immersive Armors"),
 
     # UI & QOL
     ("jei", "Just Enough Items"),
@@ -136,7 +149,7 @@ MOD_LIST = [
     ("storagedrawers", "Storage Drawers"),
 
     # MULTIPLAYER SOCIAL & FUN
-    ("voicechat", "Simple Voice Chat"),
+    ("simple-voice-chat", "Simple Voice Chat"),
     ("emotecraft", "Emotecraft"),
     ("simplehats", "Simple Hats"),
     ("chat_heads", "Chat Heads"),
@@ -165,7 +178,6 @@ MOD_LIST = [
     ("spark", "Spark Profiler"),
     ("chunky", "Chunky"),
     ("modmenu", "Mod Menu"),
-    ("purely-framework", "Framework"),
 
     # LIBRARY DEPENDENCIES
     ("fabric-api", "Fabric API"),
@@ -199,6 +211,9 @@ MOD_LIST = [
     ("owo-lib", "owo-lib"),
     ("revelationary", "Revelationary"),
     ("midnightlib", "MidnightLib"),
+    ("porting_lib", "Porting Lib"),
+    ("fakerlib", "FakerLib"),
+    ("zenith-attributes", "Zenith Attributes"),
     ("accessories", "Accessories"),
     ("modonomicon", "Modonomicon"),
     ("patchouli", "Patchouli"),
@@ -206,6 +221,14 @@ MOD_LIST = [
     ("cristellib", "Cristel Lib"),
     ("coroutil", "CoroUtil"),
     ("collective", "Collective (Library)"),
+    ("data-attributes-directors-cut", "Data Attributes (Director's Cut)"),
+    ("attribute-helpers", "Attribute Helpers"),
+    ("spell-engine", "Spell Engine"),
+    ("cardinal-components-api", "Cardinal Components API"),
+    ("ranged-weapon-api", "Ranged Weapon API"),
+    ("spell-power", "Spell Power"),
+    ("resourceful-config", "Resourceful Config"),
+    ("yacl", "Yet Another Config Lib"),
 
 ]
 
@@ -233,24 +256,51 @@ def get_best_version(project_id_or_slug):
                 if v_stable: return v_stable[0]
             
             if project_id_or_slug == "createaddition":
-                # Version 1.3.4+ require Create 6.x. Stay on 1.2.6 for Create 0.5.1 compatibility
-                v_stable = [v for v in versions if "1.2.6" in v["version_number"].lower() and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
+                # Version 1.3.x+ require Create 6.x. Stay on 1.2.3 for Create 0.5.1 compatibility
+                v_stable = [v for v in versions if "1.2.3" in v["version_number"].lower() and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
                 if v_stable: return v_stable[0]
-
+                return None # Prevent fallback to crashing versions
             
             if project_id_or_slug == "create-deco":
                 # Version 2.1.1+ is for Create 0.6.x. Stay on 2.0.2 for Create 0.5.1
                 v_stable = [v for v in versions if "2.0.2" in v["version_number"].lower() and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
                 if v_stable: return v_stable[0]
+                return None
             
             if project_id_or_slug in ["create-bells-and-whistles", "bellsandwhistles"]:
                 v_stable = [v for v in versions if "0.4.5" in v["version_number"].lower() and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
                 if v_stable: return v_stable[0]
+                return None
 
-                
+            if project_id_or_slug == "create-big-cannons":
+                # Version 5.7.1 is for Create 0.5.1 on 1.20.1
+                v_stable = [v for v in versions if "5.7.1" in v["version_number"].lower() and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
+                if v_stable: return v_stable[0]
+                return None
+
+            if project_id_or_slug in ["railways", "create-steam-n-rails"]:
+                # Pin to 1.6.9 for Create 0.5.1 stability
+                v_stable = [v for v in versions if "1.6.9" in v["version_number"].lower() and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
+                if v_stable: return v_stable[0]
+                return None
+
             if project_id_or_slug == "azurelib":
-                # Gigeresque and Immersive Guns crash on the newer 3.x rewrites of azurelib.
-                v_stable = [v for v in versions if v["version_number"].startswith("2.0.") and "forge" not in v["version_number"].lower() and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
+                # Pin to 1.0.x for stability with older mods and to avoid azurelibarmor class conflicts
+                v_stable = [v for v in versions if v["version_number"].startswith("1.0.") and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
+                if v_stable: return v_stable[0]
+
+            if project_id_or_slug == "deeperdarker":
+                # Version 1.3.x+ requires a newer Create version than 0.5.1-j-build.1631.
+                # Stay on 1.2.6 for compatibility.
+                v_stable = [v for v in versions if "1.2.6" in v["version_number"].lower() and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
+                if v_stable: return v_stable[0]
+                return None
+
+            if project_id_or_slug == "immediatelyfast":
+                # Pin to 1.2.x Fabric-only builds for 1.20.1. Filter by loader to avoid Forge jar.
+                v_stable = [v for v in versions if v["version_number"].startswith("1.2.")
+                            and any(gv in ["1.20", "1.20.1"] for gv in v.get("game_versions", []))
+                            and "fabric" in [l.lower() for l in v.get("loaders", [])]]
                 if v_stable: return v_stable[0]
 
             if project_id_or_slug == "geckolib":
@@ -263,6 +313,22 @@ def get_best_version(project_id_or_slug):
             if project_id_or_slug == "numismatics":
                 # 1.0.15 requires Create 6.x. Stay on 1.0.11 for Create 0.5.1 compatibility
                 v_stable = [v for v in versions if "1.0.11" in v["version_number"] and any(l.lower() in ["fabric", "quilt"] for l in v.get("loaders", []))]
+                if v_stable: return v_stable[0]
+
+            if project_id_or_slug == "relicex-directors-cut":
+                # RelicEx 4.0 moved to azurelibarmor which causes NoClassDefFoundError with AzureLib 1.0.33
+                # We need to stay on 3.4.2 which depends on the old AzureLib structure
+                v_stable = [v for v in versions if v["version_number"].startswith("3.4.") and "fabric" in [l.lower() for l in v.get("loaders", [])]]
+                if v_stable: return v_stable[0]
+
+            if project_id_or_slug == "playerex-directors-cut":
+                # Must stay on 3.x to match RelicEx 3.4.2 and avoid new abstractions
+                v_stable = [v for v in versions if v["version_number"].startswith("3.7.") and "fabric" in [l.lower() for l in v.get("loaders", [])]]
+                if v_stable: return v_stable[0]
+
+            if project_id_or_slug == "data-attributes-directors-cut":
+                # Must stay on 1.6.x to match PlayerEx 3.x and RelicEx 3.4.2
+                v_stable = [v for v in versions if v["version_number"].startswith("1.6.") and "fabric" in [l.lower() for l in v.get("loaders", [])]]
                 if v_stable: return v_stable[0]
 
             if project_id_or_slug == "immersive-guns":
