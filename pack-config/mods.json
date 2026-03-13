@@ -64,6 +64,30 @@
         "name": "Better village"
       },
       {
+        "slug": "biomancy",
+        "name": "Biomancy"
+      },
+      {
+        "slug": "biobutchers-delight",
+        "name": "BioButcher's Delight"
+      },
+      {
+        "slug": "biomantic-delight",
+        "name": "Biomantic Delight"
+      },
+      {
+        "slug": "alexs-mobs",
+        "name": "Alex's Mobs"
+      },
+      {
+        "slug": "alexs-caves",
+        "name": "Alex's Caves"
+      },
+      {
+        "slug": "citadel",
+        "name": "Citadel"
+      },
+      {
         "slug": "bookshelf",
         "name": "Bookshelf"
       },
@@ -96,16 +120,16 @@
         "name": "Collective"
       },
       {
-        "slug": "comforts",
-        "name": "Comforts"
-      },
-      {
         "slug": "coroutil",
         "name": "CoroUtil"
       },
       {
         "slug": "create",
         "name": "Create"
+      },
+      {
+        "slug": "createnuclear",
+        "name": "Create Nuclear"
       },
       {
         "slug": "create-big-cannons",
@@ -188,7 +212,7 @@
         "name": "Farmer's Delight"
       },
       {
-        "slug": "ferritecore",
+        "slug": "uXXizFIs",
         "name": "Ferrite Core"
       },
       {
@@ -206,10 +230,6 @@
       {
         "slug": "geckolib",
         "name": "GeckoLib"
-      },
-      {
-        "slug": "immersive-aircraft",
-        "name": "Immersive Aircraft"
       },
       {
         "slug": "immersive-armors",
@@ -360,16 +380,8 @@
         "name": "SparseStructures"
       },
       {
-        "slug": "storagedrawers",
-        "name": "Storage Drawers"
-      },
-      {
-        "slug": "structory",
-        "name": "Structory"
-      },
-      {
-        "slug": "structory_towers",
-        "name": "Structory: Towers"
+        "slug": "amendments",
+        "name": "Amendments"
       },
       {
         "slug": "supplementaries",
@@ -410,10 +422,6 @@
       {
         "slug": "waystones",
         "name": "Waystones"
-      },
-      {
-        "slug": "dungeons_arise",
-        "name": "When Dungeons Arise"
       },
       {
         "slug": "whisperwoods",
@@ -474,14 +482,6 @@
     ],
     "client": [
       {
-        "slug": "ambientsounds",
-        "name": "AmbientSounds"
-      },
-      {
-        "slug": "appleskin",
-        "name": "AppleSkin"
-      },
-      {
         "slug": "betterthirdperson",
         "name": "Better Third Person"
       },
@@ -514,10 +514,6 @@
         "name": "Mandela Catalogue"
       },
       {
-        "slug": "memoryleakfix",
-        "name": "Memory Leak Fix"
-      },
-      {
         "slug": "mousetweaks",
         "name": "Mouse Tweaks"
       },
@@ -543,16 +539,5 @@
       }
     ],
     "server": []
-  },
-  "patched_mods": [
-    {
-      "filename": "Apotheosis-1.20.1-7.4.8.jar"
-    },
-    {
-      "filename": "ApothicAttributes-1.20.1-1.3.7.jar"
-    },
-    {
-      "filename": "Placebo-1.20.1-8.6.3.jar"
-    }
-  ]
+  }
 }

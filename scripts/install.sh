@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 # ============================================================
 # Flesh & Steel - Forge Server Installer
-# Minecraft 1.20.1 | Forge 47.3.0
+# Reads versions from ../pack-config/mods.json
 # ============================================================
 set -euo pipefail
 
-MINECRAFT_VERSION="1.20.1"
-FORGE_VERSION="47.3.0"
-FORGE_FULL_VERSION="${MINECRAFT_VERSION}-${FORGE_VERSION}"
-FORGE_INSTALLER_URL="https://maven.minecraftforge.net/net/minecraftforge/forge/${FORGE_FULL_VERSION}/forge-${FORGE_FULL_VERSION}-installer.jar"
 
 SERVER_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SERVER_DIR"
@@ -37,11 +33,14 @@ if [ "$JAVA_VER" -lt 17 ] 2>/dev/null; then
     echo "   Please update Java and try again."
     exit 1
 fi
-echo "✅ Java $JAVA_VER detected"
+echo "✅ Java $JAVA_VER detected."
+echo "✅ jq detected."
+echo "✅ Config loaded: MC ${MINECRAFT_VERSION}, Forge ${FORGE_VERSION}"
 
 # ------------------------------------
-# 2. Download and run Forge Installer
+# 3. Download and run Forge Installer
 # ------------------------------------
+echo ""
 INSTALLER_JAR="forge-${FORGE_FULL_VERSION}-installer.jar"
 FORGE_SERVER_JAR="forge-${FORGE_FULL_VERSION}-shim.jar"
 
@@ -59,8 +58,9 @@ else
 fi
 
 # ------------------------------------
-# 3. Accept EULA
+# 4. Accept EULA
 # ------------------------------------
+echo ""
 if [ ! -f "eula.txt" ] || ! grep -q "eula=true" eula.txt 2>/dev/null; then
     echo ""
     echo "📜 Minecraft EULA: https://aka.ms/MinecraftEULA"
@@ -75,8 +75,9 @@ if [ ! -f "eula.txt" ] || ! grep -q "eula=true" eula.txt 2>/dev/null; then
 fi
 
 # ------------------------------------
-# 4. Generate default server.properties if missing
+# 5. Generate default server.properties if missing
 # ------------------------------------
+echo ""
 if [ ! -f "server.properties" ]; then
     echo "📝 Generating server.properties with Flesh & Steel defaults..."
     cat > server.properties << 'PROPS'
@@ -145,7 +146,7 @@ else
 fi
 
 # ------------------------------------
-# 5. Check mods directory
+# 6. Check mods directory
 # ------------------------------------
 echo ""
 echo "📦 Checking mods directory..."

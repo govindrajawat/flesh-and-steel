@@ -663,5 +663,35 @@
         "filename": "spark-1.10.53-forge.jar",
         "name": "spark",
         "url": "https://modrinth.com/mod/l6YH9Als"
+    },
+    {
+        "filename": "biomancy-1.20.1-0.4.2.1.jar",
+        "name": "Biomancy",
+        "url": "https://modrinth.com/mod/biomancy"
+    },
+    {
+        "filename": "bio-factory-1.20.1-0.1.1.jar",
+        "name": "Create: Bio-Factory",
+        "url": "https://modrinth.com/mod/bio-factory"
+    },
+    {
+        "filename": "biobutchersdelight-1.20.1-0.1.0.jar",
+        "name": "BioButcher's Delight",
+        "url": "https://modrinth.com/mod/biobutchers-delight"
+    },
+    {
+        "filename": "biomantic-delight-1.20.1-0.2.0.jar",
+        "name": "Biomantic Delight",
+        "url": "https://modrinth.com/mod/biomantic-delight"
+    },
+    {
+        "filename": "alexs-mobs-1.20.1-1.23.0.jar",
+        "name": "Alex's Mobs",
+        "url": "https://modrinth.com/mod/AWcRWhaN"
+    },
+    {
+        "filename": "alexs-caves-1.20.1-1.1.0.jar",
+        "name": "Alex's Caves",
+        "url": "https://modrinth.com/mod/axC8bDlS"
     }
 ]

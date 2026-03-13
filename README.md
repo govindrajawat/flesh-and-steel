@@ -1,6 +1,6 @@
 # Flesh & Steel — Biomechanical Tech Modpack
 
-Minecraft 1.20.1 · Forge 47.3.0
+Minecraft 1.20.1 · Forge 47.4.10
 
 ## Project Structure
 
@@ -21,6 +21,11 @@ flesh-and-steel/
 ├── global_data_packs/   # GlobalPacks data packs (quests, etc.)
 │
 ├── resourcepacks/       # Resource packs (if any)
+│
+├── local_mods/           # Manually-provided mod jars (bundled into builds)
+│   ├── common/           # Included in both client and server packs
+│   ├── client/           # Client-only local jars
+│   └── server/           # Server-only local jars
 │
 ├── scripts/             # Server deployment scripts
 │   ├── install.sh       # Forge server installer
@@ -52,6 +57,7 @@ python build_pack.py
 ```
 This will:
 - Download all mods from Modrinth into `mods/common/`, `mods/client/`, `mods/server/`
+- Bundle any jars present in `local_mods/` into the client `.mrpack` and server `.zip`
 - Build `build/client-pack/flesh-and-steel.mrpack` (import in Prism/Modrinth App)
 - Build `build/server-pack/` (complete server directory)
 
