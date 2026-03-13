@@ -59,8 +59,10 @@ echo "   RAM: ${MIN_RAM} - ${MAX_RAM}"
 echo "============================================"
 
 # Forge 1.20.1 installs a run.sh wrapper — use it if present.
+# JVM flags must be passed via USER_JVM_ARGS, not as arguments to run.sh.
 if [ -f "run.sh" ]; then
-    exec bash run.sh "${JVM_FLAGS[@]}"
+    export USER_JVM_ARGS="${JVM_FLAGS[*]}"
+    exec bash run.sh
 else
     # Fallback: find the server jar directly
     SERVER_JAR=$(ls forge-*-server.jar 2>/dev/null | head -n1)

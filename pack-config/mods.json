@@ -510,10 +510,6 @@
         "name": "libIPN"
       },
       {
-        "slug": "2g0W1ZTy",
-        "name": "Mandela Catalogue"
-      },
-      {
         "slug": "mousetweaks",
         "name": "Mouse Tweaks"
       },
@@ -538,6 +534,11 @@
         "name": "Xaero's World Map"
       }
     ],
-    "server": []
+    "server": [
+      {
+        "slug": "azurelib",
+        "name": "AzureLib"
+      }
+    ]
   }
 }
