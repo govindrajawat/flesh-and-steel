@@ -51,11 +51,11 @@ ServerEvents.recipes((event) => {
 // Give players a better start so they can explore immediately
 // ============================================================
 PlayerEvents.loggedIn((event) => {
-    const { player } = event;
+    const { player, server } = event;
 
-    // Only give starter kit once
-    if (!player.data.flesh_steel_starter_given) {
-        player.data.flesh_steel_starter_given = true;
+    // Use persistentData (NBT) to ensure it survives restarts and is only given once
+    if (!player.persistentData.contains('flesh_steel_starter_given')) {
+        player.persistentData.putBoolean('flesh_steel_starter_given', true);
 
         // Give players a starter kit to begin exploring
         player.give('16x minecraft:cooked_beef');
@@ -63,7 +63,7 @@ PlayerEvents.loggedIn((event) => {
         player.give('simplyswords:iron_katana');
         player.give('travelersbackpack:standard');
 
-        // A note explaining the pack
-        player.tell(Text.green('Welcome to Flesh & Steel!'));
+        // Welcome message - Using a safe string format to avoid "Text" vs "Component" errors
+        player.tell('§aWelcome to Flesh & Steel! Your starter kit has been provided.');
     }
 });

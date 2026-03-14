@@ -36,6 +36,14 @@
         "name": "Applied Energistics 2"
       },
       {
+        "slug": "argonauts",
+        "name": "Argonauts"
+      },
+      {
+        "slug": "xaero-argonauts-integration",
+        "name": "Argonauts Xaero Integration"
+      },
+      {
         "slug": "aquamirae",
         "name": "Aquamirae"
       },
@@ -82,6 +90,10 @@
       {
         "slug": "alexs-caves",
         "name": "Alex's Caves"
+      },
+      {
+        "slug": "audio-player",
+        "name": "Audio Player"
       },
       {
         "slug": "citadel",

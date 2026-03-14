@@ -246,6 +246,7 @@ def build_server_pack(config, project_root, output_dir):
     copy_map = {
         project_root / "config": output_dir / "config",
         project_root / "global_data_packs": output_dir / "global_data_packs",
+        project_root / "audio_player": output_dir / "audio_player",
     }
     for src, dest in copy_map.items():
         if dest.exists():
