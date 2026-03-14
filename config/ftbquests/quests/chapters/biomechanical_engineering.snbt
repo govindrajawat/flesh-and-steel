@@ -12,10 +12,7 @@
 			y: 0.0d
 			shape: "gear"
 			size: 2.0d
-			description: [
-				"{image:flesh_and_steel:textures/banners/biological.png width:200 height:50 align:center}"
-				"This is the heart of Flesh & Steel. Here, we marry the cold logic of the machine with the warm adaptability of life."
-			]
+			description: ["This is the heart of Flesh & Steel. Here, we marry the cold logic of the machine with the warm adaptability of life."]
 			id: "SYNERGY_START"
 			tasks: [{ id: "S1", type: "checkmark", title: "Accept the Merger" }]
 		}

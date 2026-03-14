@@ -22,7 +22,7 @@
 				type: "checkmark"
 				title: "Hunting Season"
 			}]
-			rewards: [{ id: "R_LB1", type: "item", item: "numismatics:silver_coin", count: 16 }]
+			rewards: [{ id: "R_LB1", type: "item", item: "numismatics:bevel", count: 16 }]
 		}
 
 		// --- TIER 1: MUTANT MONSTERS ---
@@ -35,7 +35,7 @@
 			dependencies: ["9A1"]
 			id: "M_ZOMBIE"
 			tasks: [{ id: "T_MZ", type: "kill", icon: "mutantmonsters:mutant_zombie_spawn_egg", entity: "mutantmonsters:mutant_zombie", value: 1L }]
-			rewards: [{ id: "R_MZ", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "R_MZ", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "The Mutant Creeper"
@@ -46,7 +46,7 @@
 			dependencies: ["9A1"]
 			id: "M_CREEPER"
 			tasks: [{ id: "T_MC", type: "kill", icon: "mutantmonsters:mutant_creeper_spawn_egg", entity: "mutantmonsters:mutant_creeper", value: 1L }]
-			rewards: [{ id: "R_MC", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "R_MC", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "The Mutant Skeleton"
@@ -57,7 +57,7 @@
 			dependencies: ["9A1"]
 			id: "M_SKELETON"
 			tasks: [{ id: "T_MS", type: "kill", icon: "mutantmonsters:mutant_skeleton_spawn_egg", entity: "mutantmonsters:mutant_skeleton", value: 1L }]
-			rewards: [{ id: "R_MS", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "R_MS", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 
 		// --- TIER 2: SONS OF SINS ---
@@ -71,7 +71,7 @@
 			dependencies: ["M_CREEPER"]
 			id: "SINS_HUB"
 			tasks: [{ id: "S1", type: "checkmark" }]
-			rewards: [{ id: "RS1", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			rewards: [{ id: "RS1", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 		{
 			title: "Hunt: Prowler"
@@ -91,7 +91,7 @@
 			dependencies: ["SINS_HUB"]
 			id: "H_WOE"
 			tasks: [{ id: "T_WOE", type: "kill", entity: "sons_of_sins:woe", value: 1L }]
-			rewards: [{ id: "RS3", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RS3", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 
 		// --- TIER 3: LEGENDARY BOSSES ---
@@ -105,7 +105,7 @@
 			dependencies: ["H_PROWLER", "H_WOE"]
 			id: "BOSS_BLOAT"
 			tasks: [{ id: "T_BLOAT", type: "checkmark", title: "Locate the Bloat" }]
-			rewards: [{ id: "RS4", type: "item", item: "numismatics:gold_coin", count: 10 }]
+			rewards: [{ id: "RS4", type: "item", item: "numismatics:sun", count: 10 }]
 		}
 	]
 }

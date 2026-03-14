@@ -12,13 +12,10 @@
 			y: 0.0d
 			shape: "square"
 			size: 1.5d
-			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"As your factory grows, manual sorting becomes impossible. AE2 allows you to convert physical matter into digital streams."
-			]
+			description: ["As your factory grows, manual sorting becomes impossible. AE2 allows you to convert physical matter into digital streams."]
 			id: "5A"
 			tasks: [{ id: "5B", type: "item", item: "ae2:certus_quartz_crystal", count: 16L }]
-			rewards: [{ id: "R5A", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			rewards: [{ id: "R5A", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 		{
 			title: "The ME Controller"
@@ -29,7 +26,7 @@
 			dependencies: ["C_DENSE"]
 			id: "CONTROLLER"
 			tasks: [{ id: "T_CONT", type: "item", item: "ae2:controller" }]
-			rewards: [{ id: "RC1", type: "item", item: "numismatics:gold_coin", count: 10 }]
+			rewards: [{ id: "RC1", type: "item", item: "numismatics:sun", count: 10 }]
 		}
 		{
 			title: "The Digital Singularity"
@@ -42,7 +39,7 @@
 			id: "SINGULARITY"
 			tasks: [{ id: "S1", type: "item", item: "ae2:singularity" }]
 			rewards: [
-				{ id: "RS1", type: "item", item: "numismatics:gold_coin", count: 64 }
+				{ id: "RS1", type: "item", item: "numismatics:sun", count: 64 }
 				{ id: "RS2", type: "choice", table_id: "729A3B1C5E7F9D0A" }
 			]
 		}

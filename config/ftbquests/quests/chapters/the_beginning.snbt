@@ -13,13 +13,12 @@
 			shape: "square"
 			size: 1.5d
 			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
 				"&b[STORY LOG]: Initialization Complete.&r"
 				"Welcome, Unit-01. You are a biological neural network inside a salvaged armored frame. Your primary directive is to rebuild the factory."
 			]
 			id: "1A"
 			tasks: [{ id: "1B", type: "checkmark", title: "Wake Up" }]
-			rewards: [{ id: "R1", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "R1", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "The Old World: Wood"
@@ -29,7 +28,7 @@
 			dependencies: ["1A"]
 			id: "WOOD"
 			tasks: [{ id: "T_WOOD", type: "item", item: "minecraft:oak_log", count: 16L }]
-			rewards: [{ id: "RW1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RW1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "The Old World: Stone"
@@ -39,7 +38,7 @@
 			dependencies: ["WOOD"]
 			id: "STONE"
 			tasks: [{ id: "T_STONE", type: "item", item: "minecraft:cobblestone", count: 16L }]
-			rewards: [{ id: "RS1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RS1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "Flint Scraping"
@@ -49,7 +48,7 @@
 			dependencies: ["STONE"]
 			id: "FLINT"
 			tasks: [{ id: "T_FLINT", type: "item", item: "minecraft:flint" }]
-			rewards: [{ id: "RF1", type: "item", item: "numismatics:silver_coin", count: 1 }]
+			rewards: [{ id: "RF1", type: "item", item: "numismatics:bevel", count: 1 }]
 		}
 		{
 			title: "The Workbench"
@@ -59,7 +58,7 @@
 			dependencies: ["WOOD"]
 			id: "WORKBENCH"
 			tasks: [{ id: "T_WBNCH", type: "item", item: "minecraft:crafting_table" }]
-			rewards: [{ id: "RWB1", type: "item", item: "numismatics:silver_coin", count: 3 }]
+			rewards: [{ id: "RWB1", type: "item", item: "numismatics:bevel", count: 3 }]
 		}
 		{
 			title: "Firelight"
@@ -69,7 +68,7 @@
 			dependencies: ["WORKBENCH"]
 			id: "TORCH"
 			tasks: [{ id: "T_TORCH", type: "item", item: "minecraft:torch", count: 16L }]
-			rewards: [{ id: "RT1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RT1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "The Furnace"
@@ -79,7 +78,7 @@
 			dependencies: ["TORCH"]
 			id: "FURNACE"
 			tasks: [{ id: "T_FURN", type: "item", item: "minecraft:furnace" }]
-			rewards: [{ id: "RFU1", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "RFU1", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "Flesh Maintenance"
@@ -101,7 +100,7 @@
 			dependencies: ["FOOD_HUB"]
 			id: "BERRIES"
 			tasks: [{ id: "T_BERRY", type: "item", item: "minecraft:sweet_berries", count: 16L }]
-			rewards: [{ id: "RB1", type: "item", item: "numismatics:silver_coin", count: 1 }]
+			rewards: [{ id: "RB1", type: "item", item: "numismatics:bevel", count: 1 }]
 		}
 		{
 			title: "Nutrient Bars"
@@ -111,7 +110,7 @@
 			dependencies: ["FOOD_HUB"]
 			id: "NUT_BAR"
 			tasks: [{ id: "T_NBAR", type: "item", item: "biomancy:nutrient_bar" }]
-			rewards: [{ id: "RNB1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RNB1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "Fresh Water"
@@ -121,7 +120,7 @@
 			dependencies: ["FOOD_HUB"]
 			id: "WATER"
 			tasks: [{ id: "T_WATER", type: "item", item: "minecraft:water_bucket" }]
-			rewards: [{ id: "RW2", type: "item", item: "numismatics:silver_coin", count: 3 }]
+			rewards: [{ id: "RW2", type: "item", item: "numismatics:bevel", count: 3 }]
 		}
 		{
 			title: "Mobile Logistics"
@@ -133,7 +132,7 @@
 			dependencies: ["FURNACE"]
 			id: "BACKPACK_HUB"
 			tasks: [{ id: "BH1", type: "checkmark" }]
-			rewards: [{ id: "RBH1", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "RBH1", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "Standard Backpack"
@@ -143,7 +142,7 @@
 			dependencies: ["BACKPACK_HUB"]
 			id: "BACKPACK_STD"
 			tasks: [{ id: "T_BSTD", type: "item", item: "travelersbackpack:standard" }]
-			rewards: [{ id: "RBS1", type: "item", item: "numismatics:silver_coin", count: 10 }]
+			rewards: [{ id: "RBS1", type: "item", item: "numismatics:bevel", count: 10 }]
 		}
 		{
 			title: "Tanks & Hoses"
@@ -153,7 +152,7 @@
 			dependencies: ["BACKPACK_STD"]
 			id: "B_TANKS"
 			tasks: [{ id: "T_BTNK", type: "checkmark", title: "Add Tanks" }]
-			rewards: [{ id: "RBT1", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "RBT1", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "Backpack Upgrades"
@@ -163,7 +162,7 @@
 			dependencies: ["B_TANKS"]
 			id: "B_UPGRADE"
 			tasks: [{ id: "T_BUP", type: "checkmark", title: "Upgrade the Rig" }]
-			rewards: [{ id: "RBU1", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RBU1", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "The Sleeping Bag"
@@ -172,8 +171,8 @@
 			description: ["Skip the night without relocating your base."]
 			dependencies: ["WORKBENCH"]
 			id: "SLEEPING_BAG"
-			tasks: [{ id: "T_SBAG", type: "item", item: "comforts:sleeping_bag_white" }]
-			rewards: [{ id: "RSB1", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			tasks: [{ id: "T_SBAG", type: "item", item: "minecraft:white_bed" }]
+			rewards: [{ id: "RSB1", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "The Hammock"
@@ -182,8 +181,8 @@
 			description: ["For skipping the day when you need to hunt nocturnal bioluminescent creatures."]
 			dependencies: ["SLEEPING_BAG"]
 			id: "HAMMOCK"
-			tasks: [{ id: "T_HAMM", type: "item", item: "comforts:hammock_white" }]
-			rewards: [{ id: "RH2", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			tasks: [{ id: "T_HAMM", type: "item", item: "minecraft:white_bed" }]
+			rewards: [{ id: "RH2", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "The Bounty Board"
@@ -195,7 +194,7 @@
 			dependencies: ["WORKBENCH"]
 			id: "BOUNTY_HUB"
 			tasks: [{ id: "TH1", type: "observation", to_observe: "bountiful:bountyboard", timer: 0L }]
-			rewards: [{ id: "RBH2", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "RBH2", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "Earning Silver"
@@ -205,7 +204,7 @@
 			dependencies: ["BOUNTY_HUB"]
 			id: "SILVER_QUEST"
 			tasks: [{ id: "T_SILV", type: "checkmark", title: "Mercenary Work" }]
-			rewards: [{ id: "R_SILV", type: "item", item: "numismatics:silver_coin", count: 10 }]
+			rewards: [{ id: "R_SILV", type: "item", item: "numismatics:bevel", count: 10 }]
 		}
 		{
 			title: "The Black Market License"
@@ -214,8 +213,8 @@
 			description: ["Unlocks the Black Market chapter. You must prove you can afford the gear."]
 			dependencies: ["SILVER_QUEST"]
 			id: "MARKET_LICENSE"
-			tasks: [{ id: "T_LIC", type: "item", item: "numismatics:silver_coin", count: 32L, consume_items: false }]
-			rewards: [{ id: "RML1", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			tasks: [{ id: "T_LIC", type: "item", item: "numismatics:bevel", count: 32L, consume_items: false }]
+			rewards: [{ id: "RML1", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 		{
 			title: "The First Sword"
@@ -225,7 +224,7 @@
 			dependencies: ["FURNACE"]
 			id: "SWORD"
 			tasks: [{ id: "T_SWORD", type: "item", item: "minecraft:iron_sword" }]
-			rewards: [{ id: "RSW1", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "RSW1", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "Bandages"
@@ -235,7 +234,7 @@
 			dependencies: ["SWORD"]
 			id: "BANDAGE"
 			tasks: [{ id: "T_BAND", type: "item", item: "biomancy:regeneration_serum" }]
-			rewards: [{ id: "RBA1", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "RBA1", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "Shielding"
@@ -245,7 +244,7 @@
 			dependencies: ["BANDAGE"]
 			id: "SHIELD"
 			tasks: [{ id: "T_SHLD", type: "item", item: "minecraft:shield" }]
-			rewards: [{ id: "RSH1", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RSH1", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 		{
 			title: "The Map"
@@ -255,7 +254,7 @@
 			dependencies: ["WORKBENCH"]
 			id: "MAP"
 			tasks: [{ id: "T_MAP", type: "item", item: "minecraft:map" }]
-			rewards: [{ id: "RMA1", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "RMA1", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "Waystones"
@@ -265,7 +264,7 @@
 			dependencies: ["MAP"]
 			id: "WAYSTONE"
 			tasks: [{ id: "T_WAY", type: "item", item: "waystones:waystone" }]
-			rewards: [{ id: "RWY1", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RWY1", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "Iron Smelting"
@@ -276,7 +275,7 @@
 			dependencies: ["FURNACE"]
 			id: "IRON_ERA"
 			tasks: [{ id: "T_IRON", type: "item", item: "minecraft:iron_ingot", count: 32L }]
-			rewards: [{ id: "RIE1", type: "item", item: "numismatics:silver_coin", count: 16 }]
+			rewards: [{ id: "RIE1", type: "item", item: "numismatics:bevel", count: 16 }]
 		}
 		{
 			title: "Coal Harvesting"
@@ -286,7 +285,7 @@
 			dependencies: ["IRON_ERA"]
 			id: "COAL"
 			tasks: [{ id: "T_COAL", type: "item", item: "minecraft:coal", count: 64L }]
-			rewards: [{ id: "RC1", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RC1", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 		{
 			title: "The Steel Will"
@@ -297,8 +296,8 @@
 			id: "STEEL_WILL"
 			tasks: [{ id: "T_WILL", type: "checkmark", title: "Move to Chapter 2" }]
 			rewards: [
-				{ id: "RSW2", type: "item", item: "numismatics:gold_coin", count: 2 }
-				{ id: "RSW3", type: "item", item: "numismatics:silver_coin", count: 16 }
+				{ id: "RSW2", type: "item", item: "numismatics:sun", count: 2 }
+				{ id: "RSW3", type: "item", item: "numismatics:bevel", count: 16 }
 			]
 		}
 	]

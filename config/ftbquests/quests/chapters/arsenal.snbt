@@ -1,7 +1,7 @@
 {
 	id: "4444444444444444"
 	title: "Chapter 4: Arsenal"
-	icon: "pointblank:p226"
+	icon: "pointblank:gunbench"
 	filename: "arsenal"
 	order_index: 8
 	quests: [
@@ -12,13 +12,10 @@
 			y: 0.0d
 			shape: "square"
 			size: 1.5d
-			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"In a world of biological horrors, the only thing better than a sword is a high-caliber firearm."
-			]
+			description: ["In a world of biological horrors, the only thing better than a sword is a high-caliber firearm."]
 			id: "ARMS_START"
 			tasks: [{ id: "A1", type: "checkmark", title: "Enlist Now" }]
-			rewards: [{ id: "RA1", type: "item", item: "numismatics:silver_coin", count: 16 }]
+			rewards: [{ id: "RA1", type: "item", item: "numismatics:bevel", count: 16 }]
 		}
 		{
 			title: "The Gunbench"
@@ -28,7 +25,7 @@
 			dependencies: ["ARMS_START"]
 			id: "GUNBENCH"
 			tasks: [{ id: "T_GBENCH", type: "item", item: "pointblank:gunbench" }]
-			rewards: [{ id: "RGB1", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RGB1", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "M16A4"
@@ -38,7 +35,7 @@
 			dependencies: ["GUNBENCH"]
 			id: "M16"
 			tasks: [{ id: "T_M16", type: "item", item: "pointblank:m16a4" }]
-			rewards: [{ id: "RM1", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			rewards: [{ id: "RM1", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 	]
 }

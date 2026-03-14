@@ -12,19 +12,16 @@
 			y: 0.0d
 			shape: "square"
 			size: 1.5d
-			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"Knowledge is the only thing the mutants can't take from you. Master these protocols to ensure your factory stays online."
-			]
+			description: ["Knowledge is the only thing the mutants can't take from you. Master these protocols to ensure your factory stays online."]
 			id: "T1"
 			tasks: [{ id: "T2", type: "checkmark", title: "Study the Manual" }]
-			rewards: [{ id: "RT1", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			rewards: [{ id: "RT1", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 
 		// --- LOGISTICS TIPS ---
 		{
 			title: "Mapping the Perimeter"
-			icon: "xaeroworldmap:map_icon"
+			icon: "minecraft:map"
 			x: 2.0d
 			y: -1.0d
 			description: [
@@ -34,7 +31,7 @@
 			dependencies: ["T1"]
 			id: "TIP_MAP"
 			tasks: [{ id: "TM1", type: "checkmark", title: "Acknowledge GPS" }]
-			rewards: [{ id: "RTM1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RTM1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "Chunk Security"
@@ -48,7 +45,7 @@
 			dependencies: ["T1"]
 			id: "TIP_CLAIM"
 			tasks: [{ id: "TC1", type: "checkmark", title: "Secure the Zone" }]
-			rewards: [{ id: "RTC1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RTC1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 
 		// --- THERMAL TIPS ---
@@ -64,24 +61,27 @@
 			dependencies: ["T1"]
 			id: "TIP_HEAT"
 			tasks: [{ id: "TH1", type: "checkmark", title: "Manage the Temperature" }]
-			rewards: [{ id: "RTH1", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RTH1", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 		{
 			title: "Hydration Ethics"
 			icon: "minecraft:water_bucket"
 			x: 4.0d
 			y: 0.0d
-			description: ["Rain increases your radiation level. Only drink filtered water. Use the Bio-Scanner to detect impurities in local lakes."]
+			description: [
+				"Rain increases your radiation level. Only drink filtered water. Use the Bio-Scanner to detect impurities in local lakes."
+				"With the new Thirst protocol, untreated water can also make you sick. Boil or purify before drinking."
+			]
 			dependencies: ["T1"]
 			id: "TIP_WATER"
 			tasks: [{ id: "TW1", type: "checkmark", title: "Sanitize" }]
-			rewards: [{ id: "RTW1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RTW1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 
 		// --- COMBAT TIPS ---
 		{
 			title: "The One-Two Punch"
-			icon: "simplyswords:iron_katana"
+			icon: "minecraft:iron_sword"
 			x: 6.0d
 			y: -0.5d
 			shape: "hexagon"
@@ -92,7 +92,24 @@
 			dependencies: ["TIP_HEAT"]
 			id: "TIP_COMBAT"
 			tasks: [{ id: "TCB1", type: "checkmark", title: "Master the Switch" }]
-			rewards: [{ id: "RTCB1", type: "item", item: "numismatics:silver_coin", count: 16 }]
+			rewards: [{ id: "RTCB1", type: "item", item: "numismatics:bevel", count: 16 }]
+		}
+		{
+			title: "System Hubs"
+			icon: "minecraft:compass"
+			x: 0.0d
+			y: 3.0d
+			description: [
+				"Steel Path (Chapter 2: Kinetic Engineering) covers Create power, belts, and machines."
+				"Flesh Path (Chapter 3: Biological Engineering) explains Biomancy organs and bio-forges."
+				"Digital Path (Chapter 5: Digital Integration) unlocks AE2 storage and quantum links."
+				"Environmental Survival (Chapter 14: Harsh Realities) teaches Cold Sweat, Radiach, and suits."
+				"Use these hubs as your main progression routes."
+			]
+			dependencies: ["T1"]
+			id: "TIP_HUBS"
+			tasks: [{ id: "THUB1", type: "checkmark", title: "Plot Your Path" }]
+			rewards: [{ id: "RTHUB1", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 	]
 }

@@ -22,7 +22,7 @@
 				type: "checkmark"
 				title: "Authorize Transfer"
 			}]
-			rewards: [{ id: "R_V1", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "R_V1", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 
 		// --- TIER 1: EASY VILLAGERS ---
@@ -34,7 +34,7 @@
 			dependencies: ["V_START"]
 			id: "TRADER"
 			tasks: [{ id: "T_TRADER", type: "item", item: "easy_villagers:trader" }]
-			rewards: [{ id: "RV2", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			rewards: [{ id: "RV2", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 		{
 			title: "The Iron Farm"
@@ -44,7 +44,7 @@
 			dependencies: ["V_START"]
 			id: "IRON_FARM"
 			tasks: [{ id: "T_IFARM", type: "item", item: "easy_villagers:iron_farm" }]
-			rewards: [{ id: "RV3", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RV3", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "The Breeder"
@@ -54,7 +54,7 @@
 			dependencies: ["V_START"]
 			id: "BREEDER"
 			tasks: [{ id: "T_BREED", type: "item", item: "easy_villagers:breeder" }]
-			rewards: [{ id: "RV4", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RV4", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 
 		// --- TIER 2: ADVANCED VILLAGING ---
@@ -67,7 +67,7 @@
 			dependencies: ["BREEDER"]
 			id: "INCUBATOR"
 			tasks: [{ id: "T_INC", type: "item", item: "easy_villagers:incubator" }]
-			rewards: [{ id: "RV5", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RV5", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 		{
 			title: "The Auto-Trader"
@@ -77,7 +77,7 @@
 			dependencies: ["INCUBATOR"]
 			id: "AUTO_TRADER"
 			tasks: [{ id: "T_ATRAD", type: "item", item: "easy_villagers:auto_trader" }]
-			rewards: [{ id: "RV6", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			rewards: [{ id: "RV6", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 
 		// --- TIER 3: INDUSTRIAL DECORATION ---
@@ -91,7 +91,7 @@
 			dependencies: ["V_START"]
 			id: "DECO_HUB"
 			tasks: [{ id: "DH1", type: "checkmark" }]
-			rewards: [{ id: "RV7", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			rewards: [{ id: "RV7", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 		{
 			title: "Framed Glass"
@@ -101,7 +101,7 @@
 			dependencies: ["DECO_HUB"]
 			id: "GLASS"
 			tasks: [{ id: "T_GLASS", type: "item", item: "create:framed_glass" }]
-			rewards: [{ id: "RV8", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RV8", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "Industrial Catwalks"
@@ -111,7 +111,7 @@
 			dependencies: ["DECO_HUB"]
 			id: "CATWALK"
 			tasks: [{ id: "T_CAT", type: "item", item: "create:metal_girder" }]
-			rewards: [{ id: "RV9", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RV9", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 	]
 }

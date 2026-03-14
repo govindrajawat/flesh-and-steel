@@ -13,8 +13,6 @@
 			shape: "square"
 			size: 1.5d
 			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"{image:flesh_and_steel:textures/logo.png width:100 height:100 align:center}"
 				"System booting..."
 				"Memory corrupted..."
 				""
@@ -26,7 +24,7 @@
 				type: "checkmark"
 				title: "Wake Up"
 			}]
-			rewards: [{ id: "R_L1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "R_L1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 
 		// --- ARCHIVE LOGS ---
@@ -43,7 +41,7 @@
 			dependencies: ["0A1"]
 			id: "L_LOG_1"
 			tasks: [{ id: "T_L1", type: "checkmark", title: "Read Archive" }]
-			rewards: [{ id: "R_L2", type: "item", item: "numismatics:silver_coin", count: 1 }]
+			rewards: [{ id: "R_L2", type: "item", item: "numismatics:bevel", count: 1 }]
 		}
 		{
 			title: "Archive Log #012: The Fallout"
@@ -58,7 +56,7 @@
 			dependencies: ["L_LOG_1"]
 			id: "L_LOG_2"
 			tasks: [{ id: "T_L2", type: "checkmark", title: "Read Archive" }]
-			rewards: [{ id: "R_L3", type: "item", item: "numismatics:silver_coin", count: 1 }]
+			rewards: [{ id: "R_L3", type: "item", item: "numismatics:bevel", count: 1 }]
 		}
 		{
 			title: "Archive Log #044: The Director"
@@ -71,7 +69,7 @@
 			dependencies: ["L_LOG_2"]
 			id: "L_LOG_3"
 			tasks: [{ id: "T_L3", type: "checkmark", title: "Read Archive" }]
-			rewards: [{ id: "R_L4", type: "item", item: "numismatics:silver_coin", count: 1 }]
+			rewards: [{ id: "R_L4", type: "item", item: "numismatics:bevel", count: 1 }]
 		}
 
 		// --- THE MISSION ---
@@ -90,7 +88,7 @@
 			dependencies: ["L_LOG_1"]
 			id: "L_PATH"
 			tasks: [{ id: "T_LPATH", type: "checkmark", title: "Accept the Mission" }]
-			rewards: [{ id: "R_L5", type: "item", item: "numismatics:silver_coin", count: 5 }]
+			rewards: [{ id: "R_L5", type: "item", item: "numismatics:bevel", count: 5 }]
 		}
 		{
 			title: "The Singularity Document"
@@ -98,14 +96,14 @@
 			y: 0.0d
 			subtitle: "Endgame Objective"
 			description: [
-				"The final goal is the **Biomechanical Singularity**. A state where your factory and your self are a single, divine entity."
+				"The final goal is the &eBiomechanical Singularity&r. A state where your factory and your self are a single, divine entity."
 				""
 				"You will need 256k storage cells, nuclear power, and primordial flesh to even begin the synthesis."
 			]
 			dependencies: ["L_PATH"]
 			id: "L_GOAL"
 			tasks: [{ id: "T_LGOAL", type: "checkmark", title: "Set Objective" }]
-			rewards: [{ id: "R_L6", type: "item", item: "numismatics:silver_coin", count: 10 }]
+			rewards: [{ id: "R_L6", type: "item", item: "numismatics:bevel", count: 10 }]
 		}
 
 		// --- ENEMY INTEL ---
@@ -118,7 +116,7 @@
 			dependencies: ["L_PATH"]
 			id: "L_INTEL_1"
 			tasks: [{ id: "T_LIN1", type: "checkmark", title: "Understand the Risk" }]
-			rewards: [{ id: "R_L7", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "R_L7", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "Intel: The Radioactive Haze"
@@ -129,7 +127,7 @@
 			dependencies: ["L_INTEL_1"]
 			id: "L_INTEL_2"
 			tasks: [{ id: "T_LIN2", type: "checkmark", title: "Understand the Toxic Rain" }]
-			rewards: [{ id: "R_L8", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "R_L8", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 	]
 }

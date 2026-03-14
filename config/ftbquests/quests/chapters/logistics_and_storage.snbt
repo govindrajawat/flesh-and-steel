@@ -12,20 +12,15 @@
 			y: 0.0d
 			shape: "square"
 			size: 1.5d
-			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"Before you build your AE2 empire, you need a simple way to access your chests. A scattered factory is a vulnerable factory."
-			]
+			description: ["Before you build your AE2 empire, you need a simple way to access your chests. A scattered factory is a vulnerable factory."]
 			id: "A1A"
 			tasks: [{
 				id: "A1B"
 				type: "item"
 				item: "toms_storage:ts_inventory_connector"
 			}]
-			rewards: [{ id: "R_LGS1", type: "item", item: "numismatics:silver_coin", count: 8 }]
-		}
-
-		// --- TIER 1: TOM'S STORAGE ---
+			rewards: [{ id: "R_LGS1", type: "item", item: "numismatics:bevel", count: 8 }]
+		},
 		{
 			title: "Inventory Connector"
 			x: 1.5d
@@ -34,8 +29,8 @@
 			dependencies: ["A1A"]
 			id: "TOMS_CORE"
 			tasks: [{ id: "T_TCORE", type: "item", item: "toms_storage:ts_inventory_connector" }]
-			rewards: [{ id: "RS1", type: "item", item: "numismatics:silver_coin", count: 2 }]
-		}
+			rewards: [{ id: "RS1", type: "item", item: "numismatics:bevel", count: 2 }]
+		},
 		{
 			title: "Storage Terminal"
 			x: 1.5d
@@ -44,8 +39,8 @@
 			dependencies: ["TOMS_CORE"]
 			id: "TOMS_TERM"
 			tasks: [{ id: "T_TTERM", type: "item", item: "toms_storage:ts_storage_terminal" }]
-			rewards: [{ id: "RS2", type: "item", item: "numismatics:silver_coin", count: 4 }]
-		}
+			rewards: [{ id: "RS2", type: "item", item: "numismatics:bevel", count: 4 }]
+		},
 		{
 			title: "Crafting Terminal"
 			x: 1.5d
@@ -54,10 +49,8 @@
 			dependencies: ["TOMS_TERM"]
 			id: "TOMS_CRAFT"
 			tasks: [{ id: "T_TCRAFT", type: "item", item: "toms_storage:ts_crafting_terminal" }]
-			rewards: [{ id: "RS3", type: "item", item: "numismatics:gold_coin", count: 1 }]
-		}
-
-		// --- TIER 2: BIOLOGICAL PIPING ---
+			rewards: [{ id: "RS3", type: "item", item: "numismatics:sun", count: 1 }]
+		},
 		{
 			title: "Biological Logistics"
 			icon: "biomancy:flesh_bits"
@@ -68,8 +61,8 @@
 			dependencies: ["A1A"]
 			id: "A1C"
 			tasks: [{ id: "A1D", type: "checkmark", title: "Organic Transport" }]
-			rewards: [{ id: "RS4", type: "item", item: "numismatics:silver_coin", count: 8 }]
-		}
+			rewards: [{ id: "RS4", type: "item", item: "numismatics:bevel", count: 8 }]
+		},
 		{
 			title: "Flesh Pipes"
 			x: 5.5d
@@ -78,8 +71,8 @@
 			dependencies: ["A1C"]
 			id: "F_PIPE"
 			tasks: [{ id: "T_FPIPE", type: "checkmark", title: "Grow the Veins" }]
-			rewards: [{ id: "RS5", type: "item", item: "numismatics:silver_coin", count: 4 }]
-		}
+			rewards: [{ id: "RS5", type: "item", item: "numismatics:bevel", count: 4 }]
+		},
 		{
 			title: "The Bio-Distributor"
 			x: 5.5d
@@ -88,10 +81,8 @@
 			dependencies: ["F_PIPE"]
 			id: "B_DIST"
 			tasks: [{ id: "T_BDIST", type: "checkmark", title: "Balance the Hormones" }]
-			rewards: [{ id: "RS6", type: "item", item: "numismatics:silver_coin", count: 8 }]
-		}
-
-		// --- TIER 3: CREATE LOGISTICS ---
+			rewards: [{ id: "RS6", type: "item", item: "numismatics:bevel", count: 8 }]
+		},
 		{
 			title: "Industrial Conveyors"
 			icon: "create:belt_connector"
@@ -102,8 +93,8 @@
 			dependencies: ["A1A"]
 			id: "C_LOG_HUB"
 			tasks: [{ id: "CLH1", type: "checkmark" }]
-			rewards: [{ id: "RS7", type: "item", item: "numismatics:silver_coin", count: 8 }]
-		}
+			rewards: [{ id: "RS7", type: "item", item: "numismatics:bevel", count: 8 }]
+		},
 		{
 			title: "Vault Storage"
 			x: -1.5d
@@ -112,8 +103,8 @@
 			dependencies: ["C_LOG_HUB"]
 			id: "VAULT"
 			tasks: [{ id: "T_VAULT", type: "item", item: "create:item_vault" }]
-			rewards: [{ id: "RS8", type: "item", item: "numismatics:silver_coin", count: 16 }]
-		}
+			rewards: [{ id: "RS8", type: "item", item: "numismatics:bevel", count: 16 }]
+		},
 		{
 			title: "Smart Tunnels"
 			x: 1.5d
@@ -122,7 +113,7 @@
 			dependencies: ["C_LOG_HUB"]
 			id: "SMART_TUNNEL"
 			tasks: [{ id: "T_STUN", type: "item", item: "create:brass_tunnel" }]
-			rewards: [{ id: "RS9", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RS9", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 	]
 }

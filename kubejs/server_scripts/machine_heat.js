@@ -7,28 +7,51 @@ LevelEvents.tick(event => {
 
     event.level.players.forEach(player => {
         let { x, y, z } = player;
-        let foundHeat = false;
 
-        // Optimized search: Check a small 5x5x3 area around the player
-        // This is much lighter than the previous 21x21x5 search.
+        // Count nearby heat sources instead of just a boolean.
+        let heatScore = 0;
+
+        // Optimized search: Check a small 7x5x7 area around the player
         for (let dx = -3; dx <= 3; dx++) {
             for (let dy = -1; dy <= 2; dy++) {
                 for (let dz = -3; dz <= 3; dz++) {
                     let block = event.level.getBlock(x + dx, y + dy, z + dz);
-                    if (block.id == 'create:steam_engine' || block.id == 'createnuclear:reactor_casing') {
-                        foundHeat = true;
-                        break;
+                    let id = block.id;
+
+                    // Strong industrial heat sources
+                    if (id == 'create:steam_engine' || id == 'createnuclear:reactor_casing') {
+                        heatScore += 3;
+                    }
+
+                    // Ambient heat sources (fire / light)
+                    if (
+                        id == 'minecraft:torch' ||
+                        id == 'minecraft:wall_torch' ||
+                        id == 'minecraft:soul_torch' ||
+                        id == 'minecraft:campfire' ||
+                        id == 'minecraft:soul_campfire' ||
+                        id == 'minecraft:lantern' ||
+                        id == 'minecraft:soul_lantern'
+                    ) {
+                        heatScore += 1;
                     }
                 }
-                if (foundHeat) break;
             }
-            if (foundHeat) break;
         }
 
-        if (foundHeat) {
+        if (heatScore > 0) {
+            // Translate heatScore into a Cold Sweat 'heat' effect amplifier.
+            // 1–3 = mild, 4–7 = medium, 8+ = intense.
+            let amp = 0;
+            if (heatScore >= 8) {
+                amp = 2;
+            } else if (heatScore >= 4) {
+                amp = 1;
+            }
+
             // Apply Heat effect from Cold Sweat
             // We use the effect 'cold_sweat:heat' which makes the player feel warmer.
-            player.addPotionEffect('cold_sweat:heat', 60, 1, false, false);
+            player.addPotionEffect('cold_sweat:heat', 60, amp, false, false);
         }
     });
 });

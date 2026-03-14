@@ -1,13 +1,13 @@
 {
 	id: "7777777777777779"
 	title: "Chapter 7: Master of the Skies"
-	icon: "immersive_aircraft:biplane"
+	icon: "minecraft:elytra"
 	filename: "master_of_the_skies"
 	order_index: 9
 	quests: [
 		{
 			title: "Above the Fog"
-			icon: "immersive_aircraft:engine"
+			icon: "minecraft:elytra"
 			x: 0.0d
 			y: 0.0d
 			shape: "gear"
@@ -20,9 +20,9 @@
 			tasks: [{
 				id: "SKY_2"
 				type: "item"
-				item: "immersive_aircraft:engine"
+				item: "minecraft:elytra"
 			}]
-			rewards: [{ id: "R_SKY1", type: "item", item: "numismatics:silver_coin", count: 16 }]
+			rewards: [{ id: "R_SKY1", type: "item", item: "numismatics:bevel", count: 16 }]
 		}
 
 		// --- TIER 1: COMPONENTS ---
@@ -33,8 +33,8 @@
 			description: ["The physical force that moves the craft."]
 			dependencies: ["SKY_1"]
 			id: "PROP"
-			tasks: [{ id: "T_PROP", type: "item", item: "immersive_aircraft:propeller" }]
-			rewards: [{ id: "RS2", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			tasks: [{ id: "T_PROP", type: "item", item: "create:propeller" }]
+			rewards: [{ id: "RS2", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 		{
 			title: "Hull Sections"
@@ -43,8 +43,8 @@
 			description: ["Aeronautical frames built to withstand high-altitude pressure."]
 			dependencies: ["PROP"]
 			id: "HULL"
-			tasks: [{ id: "T_HULL", type: "item", item: "immersive_aircraft:hull" }]
-			rewards: [{ id: "RS3", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			tasks: [{ id: "T_HULL", type: "item", item: "create:andesite_casing" }]
+			rewards: [{ id: "RS3", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 		{
 			title: "Boilers"
@@ -53,14 +53,14 @@
 			description: ["Essential for coal-powered flight."]
 			dependencies: ["HULL"]
 			id: "S_BOILER"
-			tasks: [{ id: "T_SBOIL", type: "item", item: "immersive_aircraft:boiler" }]
-			rewards: [{ id: "RS4", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			tasks: [{ id: "T_SBOIL", type: "item", item: "create:steam_engine" }]
+			rewards: [{ id: "RS4", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 
 		// --- TIER 2: CRAFT TYPES ---
 		{
 			title: "The Airship"
-			icon: "immersive_aircraft:airship"
+			icon: "minecraft:chest_minecart"
 			x: 4.0d
 			y: 0.0d
 			shape: "square"
@@ -73,13 +73,13 @@
 			tasks: [{
 				id: "SKY_5"
 				type: "item"
-				item: "immersive_aircraft:airship"
+				item: "minecraft:chest_minecart"
 			}]
-			rewards: [{ id: "RS5", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RS5", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "The Biplane"
-			icon: "immersive_aircraft:biplane"
+			icon: "minecraft:elytra"
 			x: 4.0d
 			y: 1.0d
 			subtitle: "Speed and Power"
@@ -88,32 +88,32 @@
 			]
 			dependencies: ["SKY_1"]
 			id: "BIPLANE"
-			tasks: [{ id: "T_BIP", type: "item", item: "immersive_aircraft:biplane" }]
-			rewards: [{ id: "RS6", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			tasks: [{ id: "T_BIP", type: "item", item: "minecraft:elytra" }]
+			rewards: [{ id: "RS6", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "The Gyrodyne"
-			icon: "immersive_aircraft:gyrodyne"
+			icon: "minecraft:firework_rocket"
 			x: 4.0d
 			y: 2.0d
 			subtitle: "Vertical Lift"
 			description: ["Allows for precise vertical landing in tight factory zones."]
 			dependencies: ["SKY_1"]
 			id: "GYRO"
-			tasks: [{ id: "T_GYRO", type: "item", item: "immersive_aircraft:gyrodyne" }]
-			rewards: [{ id: "RS7", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			tasks: [{ id: "T_GYRO", type: "item", item: "minecraft:firework_rocket" }]
+			rewards: [{ id: "RS7", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "The Quadrocopter"
-			icon: "immersive_aircraft:quadrocopter"
+			icon: "minecraft:redstone_lamp"
 			x: 5.5d
 			y: 1.0d
 			subtitle: "Advanced Tech"
 			description: ["The most stable flight platform available. Requires high-tier components."]
 			dependencies: ["BIPLANE", "GYRO"]
 			id: "QUAD"
-			tasks: [{ id: "T_QUAD", type: "item", item: "immersive_aircraft:quadrocopter" }]
-			rewards: [{ id: "RS8", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			tasks: [{ id: "T_QUAD", type: "item", item: "minecraft:redstone_lamp" }]
+			rewards: [{ id: "RS8", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 
 		// --- TIER 3: ATTACHMENTS ---
@@ -125,8 +125,8 @@
 			description: ["Modify your craft with upgrades."]
 			dependencies: ["QUAD", "SKY_4"]
 			id: "SKY_WORKSHOP"
-			tasks: [{ id: "T_SWRK", type: "item", item: "immersive_aircraft:sturdy_pipes" }]
-			rewards: [{ id: "RS9", type: "item", item: "numismatics:silver_coin", count: 32 }]
+			tasks: [{ id: "T_SWRK", type: "item", item: "create:precision_mechanism" }]
+			rewards: [{ id: "RS9", type: "item", item: "numismatics:bevel", count: 32 }]
 		}
 		{
 			title: "Boosters"
@@ -136,7 +136,7 @@
 			dependencies: ["SKY_WORKSHOP"]
 			id: "BOOSTER"
 			tasks: [{ id: "T_BOOST", type: "checkmark", title: "Ignite Boosters" }]
-			rewards: [{ id: "RS10", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RS10", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 		{
 			title: "Armor Plates"
@@ -146,7 +146,7 @@
 			dependencies: ["SKY_WORKSHOP"]
 			id: "SKY_ARMOR"
 			tasks: [{ id: "T_SARM", type: "checkmark", title: "Plate the Hull" }]
-			rewards: [{ id: "RS11", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RS11", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 
 		// --- TIER 4: LOGISTICS ---
@@ -160,7 +160,7 @@
 			dependencies: ["SKY_WORKSHOP"]
 			id: "SKY_CARGO"
 			tasks: [{ id: "T_CARGO", type: "checkmark", title: "Establish Air Routes" }]
-			rewards: [{ id: "RS12", type: "item", item: "numismatics:gold_coin", count: 5 }]
+			rewards: [{ id: "RS12", type: "item", item: "numismatics:sun", count: 5 }]
 		}
 	]
 }

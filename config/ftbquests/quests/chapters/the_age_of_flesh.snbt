@@ -12,38 +12,35 @@
 			y: 0.0d
 			shape: "heart"
 			size: 1.5d
-			description: [
-				"{image:flesh_and_steel:textures/banners/biological.png width:200 height:50 align:center}"
-				"In this world, life is just another material to be engineered. Biological matter is more efficient than steel for certain tasks, but it requires 'feeding'."
-			]
+			description: ["In this world, life is just another material to be engineered. Biological matter is more efficient than steel for certain tasks, but it requires 'feeding'."]
 			id: "3A"
 			tasks: [{ id: "3B", type: "item", item: "biomancy:flesh_bits", count: 16L }]
-			rewards: [{ id: "R3A", type: "item", item: "numismatics:silver_coin", count: 10 }]
-		}
+			rewards: [{ id: "R3A", type: "item", item: "numismatics:bevel", count: 10 }]
+		},
 		{
 			title: "Bone Fragments"
 			x: 1.5d
 			y: 1.0d
 			description: ["Structural frames for biological tools."]
-			dependencies: ["B_BITS"]
+			dependencies: ["3A"]
 			id: "B_FRAG"
 			tasks: [{ id: "T_FRAG", type: "item", item: "biomancy:bone_fragment" }]
-			rewards: [{ id: "RF1", type: "item", item: "numismatics:silver_coin", count: 4 }]
-		}
+			rewards: [{ id: "RF1", type: "item", item: "numismatics:bevel", count: 4 }]
+		},
 		{
 			title: "The Bio-Forge"
 			x: 3.5d
 			y: 1.0d
 			shape: "hexagon"
 			description: ["Synthesizes organic tools and equipment."]
-			dependencies: ["DECOMP"]
+			dependencies: ["B_FRAG"]
 			id: "BIOFORGE"
 			tasks: [{ id: "T_BFORGE", type: "item", item: "biomancy:bio_forge" }]
 			rewards: [
-				{ id: "RB1", type: "item", item: "numismatics:gold_coin", count: 1 }
+				{ id: "RB1", type: "item", item: "numismatics:sun", count: 1 },
 				{ id: "RB2", type: "choice", table_id: "B10_FLESH_TECH" }
 			]
-		}
+		},
 		{
 			title: "The Organ Laboratory"
 			icon: "biomancy:malignant_flesh"
@@ -54,19 +51,19 @@
 			dependencies: ["3A"]
 			id: "ORGAN_HUB"
 			tasks: [{ id: "OH1", type: "checkmark" }]
-			rewards: [{ id: "ROH1", type: "item", item: "numismatics:gold_coin", count: 1 }]
-		}
+			rewards: [{ id: "ROH1", type: "item", item: "numismatics:sun", count: 1 }]
+		},
 		{
 			title: "The Primordial Cradle"
 			x: 10.0d
 			y: 1.0d
 			shape: "square"
 			description: ["The pinnacle of biological evolution."]
-			dependencies: ["B_SCAN"]
+			dependencies: ["BIOFORGE"]
 			id: "CRAD"
 			tasks: [{ id: "T_CRAD", type: "item", item: "biomancy:primordial_flesh" }]
 			rewards: [
-				{ id: "RC1", type: "item", item: "numismatics:gold_coin", count: 5 }
+				{ id: "RC1", type: "item", item: "numismatics:sun", count: 5 },
 				{ id: "RC2", type: "choice", table_id: "729A3B1C5E7F9D0A" }
 			]
 		}

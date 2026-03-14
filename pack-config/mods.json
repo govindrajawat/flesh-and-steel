@@ -388,10 +388,6 @@
         "name": "SimpleOres:Fusion"
       },
       {
-        "slug": "simplyswords",
-        "name": "Simply Swords"
-      },
-      {
         "slug": "l7YxzukZ",
         "name": "Sons of Sins"
       },
@@ -498,6 +494,10 @@
       {
         "slug": "spark",
         "name": "spark"
+      },
+      {
+        "slug": "iUheEnjm",
+        "name": "Thirst Was Taken"
       }
     ],
     "client": [

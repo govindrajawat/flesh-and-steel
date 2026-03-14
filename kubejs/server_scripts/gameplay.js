@@ -60,7 +60,7 @@ PlayerEvents.loggedIn((event) => {
         // Give players a starter kit to begin exploring
         player.give('16x minecraft:cooked_beef');
         player.give('32x minecraft:torch');
-        player.give('simplyswords:iron_katana');
+        player.give('minecraft:iron_sword');
         player.give('travelersbackpack:standard');
 
         // Welcome message - Using a safe string format to avoid "Text" vs "Component" errors

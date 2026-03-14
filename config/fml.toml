@@ -1,7 +1,7 @@
-{
-  "general": {
-    "background_color": "#4B0082",
-    "bar_color": "#8A2BE2",
-    "background_image": "flesh_and_steel:textures/logo.png"
-  }
-}
+[loading]
+	# The background color of the loading screen (Deep Purple)
+	background_color = "#4B0082"
+	# The color of the loading bar (Vibrant Purple)
+	bar_color = "#8A2BE2"
+	# The background image of the loading screen
+	background_image = "flesh_and_steel:textures/logo.png"

@@ -1,18 +1,41 @@
-// Biomechanical Haze: Yellowish-Green Fog when in irradiated or toxic biomes
-ClientEvents.tick(event => {
-    // This runs on the client every tick
-    let player = event.player
-    if (!player) return
-    
-    // Check if player is irradiated or in a specific biome
-    // For now, we apply the haze if the player is in the Overworld during the day
-    // to simulate a permanent industrial smog.
-    
-    // Note: KubeJS for 1.20.1 Forge has RenderEvents.fogColor to change fog colors
-})
+// Biomechanical Haze: Yellowish-Green Fog in toxic / irradiated conditions
+RenderEvents.fogColor(event => {
+    const level = event.level;
+    const player = level.getNearestPlayer(event.camera.getPosition().x, event.camera.getPosition().y, event.camera.getPosition().z, 64);
+    if (!player) return;
+
+    // Only apply in Overworld
+    if (!level.dimension || String(level.dimension) !== "minecraft:overworld") return;
+
+    // Check if player is actually irradiated
+    const radiation = player.getPotionEffect('radiach:radiation');
+    if (!radiation) return;
+
+    // Base fog color (vanilla)
+    let r = event.red;
+    let g = event.green;
+    let b = event.blue;
+
+    // Increase strength with amplifier (up to a cap)
+    const amp = Math.min(radiation.amplifier + 1, 4);
+    const intensity = 0.12 * amp; // how strong the tint is
+
+    // Yellow-green smog tint
+    const hazeR = 0.85;
+    const hazeG = 0.95;
+    const hazeB = 0.25;
+
+    r = r * (1 - intensity) + hazeR * intensity;
+    g = g * (1 - intensity) + hazeG * intensity;
+    b = b * (1 - intensity) + hazeB * intensity;
+
+    event.red = r;
+    event.green = g;
+    event.blue = b;
+});
 
 // Muffled Audio when radiated
-// We simulate the 'ear ringing' and volume reduction
+// We simulate the 'ear ringing' while heavily irradiated
 LevelEvents.tick(event => {
     if (!event.level.isClientSide()) return
     let player = event.level.players[0]
@@ -20,11 +43,11 @@ LevelEvents.tick(event => {
 
     // Find radiation effect
     let radiation = player.getPotionEffect('radiach:radiation')
-    if (radiation && radiation.amplifier > 2) {
-        // High radiation = play a faint ringing sound every few seconds
-        if (event.level.time % 100 == 0) {
-            player.playSound('minecraft:block.beacon.ambient', 0.1, 2.0)
-        }
+    if (!radiation) return
+
+    // High radiation = play a faint ringing sound every few seconds
+    if (radiation.amplifier > 1 && event.level.time % 120 == 0) {
+        player.playSound('minecraft:block.beacon.ambient', 0.15, 2.0)
     }
 })
 

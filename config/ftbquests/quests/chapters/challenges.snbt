@@ -12,10 +12,7 @@
 			y: 0.0d
 			shape: "gear"
 			size: 2.0d
-			description: [
-				"{image:flesh_and_steel:textures/banners/biological.png width:200 height:50 align:center}"
-				"You have mastered Steel and Flesh. Now, prove it. These challenges are for the elite biomechanists only."
-			]
+			description: ["You have mastered Steel and Flesh. Now, prove it. These challenges are for the elite biomechanists only."]
 			id: "CHALLENGE_START"
 			tasks: [{ id: "C1", type: "checkmark", title: "Begin the Trial" }]
 		}

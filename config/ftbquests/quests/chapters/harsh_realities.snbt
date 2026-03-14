@@ -12,15 +12,11 @@
 			y: 0.0d
 			shape: "square"
 			size: 1.5d
-			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"Survival is not a suggestion; it is a full-time job. The air is poisoned, and the temperature is lethal."
-			]
+			description: ["Survival is not a suggestion; it is a full-time job. The air is poisoned, and the temperature is lethal."]
 			id: "SURVIVAL_1"
 			tasks: [{ id: "S1_CHECK", type: "checkmark", title: "Accept the Challenge" }]
-		}
-
-		// --- TIER 1: DETECTION ---
+			rewards: [{ id: "RS_1", type: "item", item: "numismatics:bevel", count: 4 }]
+		},
 		{
 			title: "Temperature Monitoring"
 			x: 1.5d
@@ -29,27 +25,34 @@
 			dependencies: ["SURVIVAL_1"]
 			id: "THERMO"
 			tasks: [{ id: "T_THERMO", type: "item", item: "cold_sweat:thermometer" }]
-		}
+			rewards: [{ id: "RS_2", type: "item", item: "numismatics:bevel", count: 2 }]
+		},
 		{
 			title: "Radiation Monitoring"
 			x: 1.5d
 			y: 1.0d
-			description: ["The Geiger Counter clicks faster as the fog thickens."]
+			description: [
+				"The Geiger Counter clicks faster as the fog thickens."
+				"Watch your HUD: Rad 'Medium' or 'High' means you are in lethal territory."
+			]
 			dependencies: ["THERMO"]
 			id: "GEIGER"
 			tasks: [{ id: "T_GEIGER", type: "item", item: "radiach:geiger_counter" }]
-		}
-
-		// --- TIER 2: BODY TEMPERATURE ---
+			rewards: [{ id: "RS_3", type: "item", item: "numismatics:bevel", count: 4 }]
+		},
 		{
 			title: "Hydration: Waterskin"
 			x: 3.5d
 			y: 0.0d
-			description: ["Water helps regulate your internal temperature. Drink to cool down."]
+			description: [
+				"Water helps regulate your internal temperature. Drink to cool down."
+				"At high heat, thirst drains faster. Keep spare water on hand."
+			]
 			dependencies: ["THERMO"]
 			id: "WATERSKIN"
 			tasks: [{ id: "T_WSKIN", type: "item", item: "cold_sweat:waterskin" }]
-		}
+			rewards: [{ id: "RS_4", type: "item", item: "numismatics:bevel", count: 2 }]
+		},
 		{
 			title: "Insulation: Sewing Kit"
 			x: 3.5d
@@ -58,18 +61,21 @@
 			dependencies: ["WATERSKIN"]
 			id: "SEWING"
 			tasks: [{ id: "T_SEW", type: "item", item: "cold_sweat:sewing_kit" }]
-		}
+			rewards: [{ id: "RS_5", type: "item", item: "numismatics:bevel", count: 4 }]
+		},
 		{
 			title: "Seasonal Clothing"
 			x: 3.5d
 			y: 2.0d
-			description: ["Parkas for winter, light clothes for summer."]
+			description: [
+				"Parkas for winter, light clothes for summer."
+				"Cold zones will show Mining Fatigue on your HUD if you are underdressed."
+			]
 			dependencies: ["SEWING"]
 			id: "CLOTHES"
 			tasks: [{ id: "T_CLOTHES", type: "checkmark", title: "Dress Properly" }]
-		}
-
-		// --- TIER 3: RADIATION PROTECTION ---
+			rewards: [{ id: "RS_6", type: "item", item: "numismatics:sun", count: 1 }]
+		},
 		{
 			title: "Lead Plating"
 			x: 5.5d
@@ -79,7 +85,8 @@
 			dependencies: ["GEIGER"]
 			id: "LEAD"
 			tasks: [{ id: "T_LEAD", type: "item", item: "radiach:lead_plate" }]
-		}
+			rewards: [{ id: "RS_7", type: "item", item: "numismatics:bevel", count: 16 }]
+		},
 		{
 			title: "Anti-Rad Pills"
 			x: 5.5d
@@ -88,7 +95,8 @@
 			dependencies: ["LEAD"]
 			id: "RAD_PILLS"
 			tasks: [{ id: "T_RADP", type: "item", item: "radiach:antirad_pill" }]
-		}
+			rewards: [{ id: "RS_8", type: "item", item: "numismatics:bevel", count: 8 }]
+		},
 		{
 			title: "Suit Workstation"
 			x: 7.0d
@@ -97,9 +105,8 @@
 			dependencies: ["LEAD"]
 			id: "SUIT_STATION"
 			tasks: [{ id: "T_SUITST", type: "item", item: "radiach:suit_workstation" }]
-		}
-
-		// --- TIER 4: THE SUIT ---
+			rewards: [{ id: "RS_9", type: "item", item: "numismatics:sun", count: 1 }]
+		},
 		{
 			title: "Anti-Rad Helmet"
 			x: 8.5d
@@ -108,7 +115,8 @@
 			dependencies: ["SUIT_STATION"]
 			id: "RAD_HELM"
 			tasks: [{ id: "T_RHELM", type: "item", item: { id: "radiach:antirad_helmet", Count: 1b, tag: { Damage: 0 } } }]
-		}
+			rewards: [{ id: "RS_10", type: "item", item: "numismatics:sun", count: 1 }]
+		},
 		{
 			title: "Anti-Rad Chestplate"
 			x: 8.5d
@@ -117,7 +125,8 @@
 			dependencies: ["RAD_HELM"]
 			id: "RAD_CHEST"
 			tasks: [{ id: "T_RCHEST", type: "item", item: { id: "radiach:antirad_chestplate", Count: 1b, tag: { Damage: 0 } } }]
-		}
+			rewards: [{ id: "RS_11", type: "item", item: "numismatics:sun", count: 1 }]
+		},
 		{
 			title: "Anti-Rad Leggings"
 			x: 8.5d
@@ -126,7 +135,8 @@
 			dependencies: ["RAD_CHEST"]
 			id: "RAD_LEGS"
 			tasks: [{ id: "T_RLEGS", type: "item", item: { id: "radiach:antirad_leggings", Count: 1b, tag: { Damage: 0 } } }]
-		}
+			rewards: [{ id: "RS_12", type: "item", item: "numismatics:sun", count: 1 }]
+		},
 		{
 			title: "Anti-Rad Boots"
 			x: 8.5d
@@ -135,77 +145,7 @@
 			dependencies: ["RAD_LEGS"]
 			id: "RAD_BOOTS"
 			tasks: [{ id: "T_RBOOTS", type: "item", item: { id: "radiach:antirad_boots", Count: 1b, tag: { Damage: 0 } } }]
-		}
-
-		// --- TIER 5: BASE MANAGEMENT ---
-		{
-			title: "The Industrial Boiler"
-			x: 10.5d
-			y: 0.0d
-			shape: "circle"
-			description: ["Heats a large building using fuel."]
-			dependencies: ["WATERSKIN"]
-			id: "BOILER"
-			tasks: [{ id: "T_BOIL", type: "item", item: "cold_sweat:boiler" }]
-		}
-		{
-			title: "The Ice Box"
-			x: 10.5d
-			y: 1.0d
-			description: ["Cools down your factory floor."]
-			dependencies: ["BOILER"]
-			id: "ICEBOX"
-			tasks: [{ id: "T_IBOX", type: "item", item: "cold_sweat:ice_box" }]
-		}
-		{
-			title: "The Hearth"
-			x: 10.5d
-			y: 2.0d
-			description: ["A permanent heat source for your central hub."]
-			dependencies: ["ICEBOX"]
-			id: "HEARTH"
-			tasks: [{ id: "T_HEARTH", type: "item", item: "cold_sweat:hearth" }]
-		}
-
-		// --- TIER 6: MACHINE PROTECTION ---
-		{
-			title: "Cooling Coils"
-			x: 12.0d
-			y: 0.5d
-			description: ["Attach these to machines to prevent them from heating your base."]
-			dependencies: ["HEARTH"]
-			id: "COOL_COIL"
-			tasks: [{ id: "T_COIL", type: "checkmark", title: "Protect the Machine" }]
-		}
-		{
-			title: "Ventilation Vents"
-			x: 12.0d
-			y: 1.5d
-			description: ["Use Create Fans to push air through these vents."]
-			dependencies: ["COOL_COIL"]
-			id: "VENTS"
-			tasks: [{ id: "T_VENT", type: "checkmark", title: "Breathe Easy" }]
-		}
-
-		// --- TIER 7: DECONTAMINATION ---
-		{
-			title: "Decontamination Station"
-			x: 14.0d
-			y: 1.0d
-			shape: "square"
-			description: ["The advanced way to remove radiation from items and players."]
-			dependencies: ["RAD_BOOTS"]
-			id: "DECON"
-			tasks: [{ id: "T_DECON", type: "item", item: "radiach:decontamination_station" }]
-		}
-		{
-			title: "The Rad-Suppressor"
-			x: 16.0d
-			y: 1.0d
-			description: ["A beacon that removes radiation from a fixed area."]
-			dependencies: ["DECON"]
-			id: "SUPPRESSOR"
-			tasks: [{ id: "T_SUPP", type: "item", item: "radiach:rad_suppressor" }]
+			rewards: [{ id: "RS_13", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 	]
 }

@@ -12,17 +12,14 @@
 			y: 0.0d
 			shape: "gear"
 			size: 1.5d
-			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"Kinetic Engineering is the backbone of this world. Without rotation, you are just meat waiting to be processed."
-			]
+			description: ["Kinetic Engineering is the backbone of this world. Without rotation, you are just meat waiting to be processed."]
 			id: "2A"
 			tasks: [{
 				id: "2B"
 				type: "item"
 				item: "create:andesite_alloy"
 			}]
-			rewards: [{ id: "R2A", type: "item", item: "numismatics:silver_coin", count: 10 }]
+			rewards: [{ id: "R2A", type: "item", item: "numismatics:bevel", count: 10 }]
 		}
 		{
 			title: "The Shaft"
@@ -32,7 +29,7 @@
 			dependencies: ["2A"]
 			id: "SHAFT"
 			tasks: [{ id: "T_SHAFT", type: "item", item: "create:shaft" }]
-			rewards: [{ id: "RS1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RS1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "Cogwheels"
@@ -42,7 +39,7 @@
 			dependencies: ["SHAFT"]
 			id: "COG"
 			tasks: [{ id: "T_COG", type: "item", item: "create:cogwheel" }]
-			rewards: [{ id: "RC1", type: "item", item: "numismatics:silver_coin", count: 2 }]
+			rewards: [{ id: "RC1", type: "item", item: "numismatics:bevel", count: 2 }]
 		}
 		{
 			title: "Large Cogwheels"
@@ -52,7 +49,7 @@
 			dependencies: ["COG"]
 			id: "L_COG"
 			tasks: [{ id: "T_L_COG", type: "item", item: "create:large_cogwheel" }]
-			rewards: [{ id: "RLC1", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			rewards: [{ id: "RLC1", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 		{
 			title: "Mechanical Belts"
@@ -62,7 +59,7 @@
 			dependencies: ["SHAFT"]
 			id: "BELT"
 			tasks: [{ id: "T_BELT", type: "item", item: "create:belt_connector" }]
-			rewards: [{ id: "RB1", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RB1", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 		{
 			title: "The Press"
@@ -73,7 +70,7 @@
 			id: "PRESS"
 			tasks: [{ id: "T_PRESS", type: "item", item: "create:mechanical_press" }]
 			rewards: [
-				{ id: "RP1", type: "item", item: "numismatics:gold_coin", count: 1 }
+				{ id: "RP1", type: "item", item: "numismatics:sun", count: 1 }
 				{ id: "RP2", type: "choice", table_id: "B10_STEEL_TECH" }
 			]
 		}
@@ -87,7 +84,7 @@
 			dependencies: ["2A"]
 			id: "POWER_HUB"
 			tasks: [{ id: "PH1", type: "checkmark" }]
-			rewards: [{ id: "RPH1", type: "item", item: "numismatics:silver_coin", count: 10 }]
+			rewards: [{ id: "RPH1", type: "item", item: "numismatics:bevel", count: 10 }]
 		}
 		{
 			title: "Standard Water Wheel"
@@ -97,7 +94,7 @@
 			dependencies: ["POWER_HUB"]
 			id: "WATER_W"
 			tasks: [{ id: "T_WW", type: "item", item: "create:water_wheel" }]
-			rewards: [{ id: "RWW1", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RWW1", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 		{
 			title: "Hydraulic Systems"
@@ -109,7 +106,7 @@
 			dependencies: ["PRESS"]
 			id: "FLUID_HUB"
 			tasks: [{ id: "FH1", type: "checkmark" }]
-			rewards: [{ id: "RFH1", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RFH1", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "Mechanical Pump"
@@ -119,7 +116,7 @@
 			dependencies: ["PIPE"]
 			id: "PUMP"
 			tasks: [{ id: "T_PUMP", type: "item", item: "create:mechanical_pump" }]
-			rewards: [{ id: "RP3", type: "item", item: "numismatics:silver_coin", count: 16 }]
+			rewards: [{ id: "RP3", type: "item", item: "numismatics:bevel", count: 16 }]
 		}
 		{
 			title: "Railway Tracks"
@@ -129,7 +126,7 @@
 			dependencies: ["RAIL_HUB"]
 			id: "TRACKS"
 			tasks: [{ id: "T_TRACK", type: "item", item: "create:track" }]
-			rewards: [{ id: "RT1", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			rewards: [{ id: "RT1", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 	]
 }

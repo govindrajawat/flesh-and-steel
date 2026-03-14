@@ -1,7 +1,7 @@
 {
 	id: "9A1B2C3D4E5F6G7H"
 	title: "The Black Market"
-	icon: "numismatics:gold_coin"
+	icon: "numismatics:sun"
 	filename: "the_black_market"
 	order_index: 16
 	quests: [
@@ -10,10 +10,7 @@
 			x: 0.0d
 			y: 0.0d
 			shape: "gear"
-			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"Official supplies for the sanctioned Biomechanist."
-			]
+			description: ["Official supplies for the sanctioned Biomechanist."]
 			id: "HEADER_SUPPLIES"
 			tasks: [{
 				id: "T_HEADER_1"
@@ -31,7 +28,7 @@
 			tasks: [{
 				id: "T_BUY_1"
 				type: "item"
-				item: "numismatics:silver_coin"
+				item: "numismatics:bevel"
 				count: 2L
 				consume_items: true
 			}]
@@ -52,7 +49,7 @@
 			tasks: [{
 				id: "T_BUY_2"
 				type: "item"
-				item: "numismatics:silver_coin"
+				item: "numismatics:bevel"
 				count: 5L
 				consume_items: true
 			}]
@@ -73,7 +70,7 @@
 			tasks: [{
 				id: "T_BUY_F"
 				type: "item"
-				item: "numismatics:silver_coin"
+				item: "numismatics:bevel"
 				consume_items: true
 			}]
 			rewards: [{
@@ -100,7 +97,7 @@
 			y: 1.5d
 			subtitle: "1x Gold Coin"
 			id: "BUY_PRESS_CALC"
-			tasks: [{ id: "T_BPC", type: "item", item: "numismatics:gold_coin", consume_items: true }]
+			tasks: [{ id: "T_BPC", type: "item", item: "numismatics:sun", consume_items: true }]
 			rewards: [{ id: "R_BPC", type: "item", item: "ae2:calculation_processor_press" }]
 		}
 		{
@@ -110,7 +107,7 @@
 			y: 1.5d
 			subtitle: "1x Gold Coin"
 			id: "BUY_PRESS_LOGIC"
-			tasks: [{ id: "T_BPL", type: "item", item: "numismatics:gold_coin", consume_items: true }]
+			tasks: [{ id: "T_BPL", type: "item", item: "numismatics:sun", consume_items: true }]
 			rewards: [{ id: "R_BPL", type: "item", item: "ae2:logic_processor_press" }]
 		}
 		{
@@ -120,7 +117,7 @@
 			y: 1.5d
 			subtitle: "1x Gold Coin"
 			id: "BUY_PRESS_ENG"
-			tasks: [{ id: "T_BPE", type: "item", item: "numismatics:gold_coin", consume_items: true }]
+			tasks: [{ id: "T_BPE", type: "item", item: "numismatics:sun", consume_items: true }]
 			rewards: [{ id: "R_BPE", type: "item", item: "ae2:engineering_processor_press" }]
 		}
 		{
@@ -130,7 +127,7 @@
 			y: 2.5d
 			subtitle: "2x Gold Coins"
 			id: "BUY_NETHERITE"
-			tasks: [{ id: "T_BN", type: "item", item: "numismatics:gold_coin", count: 2L, consume_items: true }]
+			tasks: [{ id: "T_BN", type: "item", item: "numismatics:sun", count: 2L, consume_items: true }]
 			rewards: [{ id: "R_BN", type: "item", item: "minecraft:netherite_scrap", count: 4 }]
 		}
 
@@ -139,10 +136,7 @@
 			x: 8.0d
 			y: 0.0d
 			shape: "square"
-			description: [
-				"{image:flesh_and_steel:textures/banners/biological.png width:200 height:50 align:center}"
-				"High-risk assignments. Pay the fee to unlock the bounty."
-			]
+			description: ["High-risk assignments. Pay the fee to unlock the bounty."]
 			id: "HEADER_CONTRACTS"
 			tasks: [{
 				id: "T_HEADER_2"
@@ -160,7 +154,7 @@
 			tasks: [{
 				id: "T_CONTRACT_1"
 				type: "item"
-				item: "numismatics:gold_coin"
+				item: "numismatics:sun"
 				consume_items: true
 			}]
 			rewards: [{
@@ -186,7 +180,7 @@
 			y: 5.0d
 			subtitle: "16x Silver Coins"
 			id: "BUY_PRECISION"
-			tasks: [{ id: "T_BPREC", type: "item", item: "numismatics:silver_coin", count: 16L, consume_items: true }]
+			tasks: [{ id: "T_BPREC", type: "item", item: "numismatics:bevel", count: 16L, consume_items: true }]
 			rewards: [{ id: "R_BPREC", type: "item", item: "create:precision_mechanism" }]
 		}
 		{
@@ -196,7 +190,7 @@
 			y: 5.0d
 			subtitle: "32x Silver Coins"
 			id: "BUY_BLAZE"
-			tasks: [{ id: "T_BBLAZE", type: "item", item: "numismatics:silver_coin", count: 32L, consume_items: true }]
+			tasks: [{ id: "T_BBLAZE", type: "item", item: "numismatics:bevel", count: 32L, consume_items: true }]
 			rewards: [{ id: "R_BBLAZE", type: "item", item: "create:empty_blaze_burner" }]
 		}
 
@@ -223,7 +217,7 @@
 			tasks: [{
 				id: "T_BUY_5"
 				type: "item"
-				item: "numismatics:gold_coin"
+				item: "numismatics:sun"
 				count: 5L
 				consume_items: true
 			}]
@@ -250,7 +244,7 @@
 			y: 5.0d
 			subtitle: "4x Silver Coins"
 			id: "BUY_IRON"
-			tasks: [{ id: "T_BIRON", type: "item", item: "numismatics:silver_coin", count: 4L, consume_items: true }]
+			tasks: [{ id: "T_BIRON", type: "item", item: "numismatics:bevel", count: 4L, consume_items: true }]
 			rewards: [{ id: "R_BIRON", type: "item", item: "minecraft:iron_ingot", count: 4 }]
 		}
 		{
@@ -260,7 +254,7 @@
 			y: 5.0d
 			subtitle: "2x Silver Coins"
 			id: "BUY_COPPER"
-			tasks: [{ id: "T_BCOPP", type: "item", item: "numismatics:silver_coin", count: 2L, consume_items: true }]
+			tasks: [{ id: "T_BCOPP", type: "item", item: "numismatics:bevel", count: 2L, consume_items: true }]
 			rewards: [{ id: "R_BCOPP", type: "item", item: "minecraft:copper_ingot", count: 8 }]
 		}
 		{
@@ -270,7 +264,7 @@
 			y: 4.0d
 			subtitle: "1x Silver Coin"
 			id: "BUY_WOOD"
-			tasks: [{ id: "T_BWOOD", type: "item", item: "numismatics:silver_coin", consume_items: true }]
+			tasks: [{ id: "T_BWOOD", type: "item", item: "numismatics:bevel", consume_items: true }]
 			rewards: [{ id: "R_BWOOD", type: "item", item: "minecraft:oak_log", count: 16 }]
 		}
 		{
@@ -280,7 +274,7 @@
 			y: 4.0d
 			subtitle: "1x Silver Coin"
 			id: "BUY_COAL"
-			tasks: [{ id: "T_BCOAL", type: "item", item: "numismatics:silver_coin", consume_items: true }]
+			tasks: [{ id: "T_BCOAL", type: "item", item: "numismatics:bevel", consume_items: true }]
 			rewards: [{ id: "R_BCOAL", type: "item", item: "minecraft:coal", count: 8 }]
 		}
 		{
@@ -290,7 +284,7 @@
 			y: 6.0d
 			subtitle: "1x Silver Coin"
 			id: "BUY_TORCHES"
-			tasks: [{ id: "T_BTORCH", type: "item", item: "numismatics:silver_coin", consume_items: true }]
+			tasks: [{ id: "T_BTORCH", type: "item", item: "numismatics:bevel", consume_items: true }]
 			rewards: [{ id: "R_BTORCH", type: "item", item: "minecraft:torch", count: 16 }]
 		}
 	]

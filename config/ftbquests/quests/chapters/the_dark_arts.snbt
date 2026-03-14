@@ -12,17 +12,14 @@
 			y: 0.0d
 			shape: "square"
 			size: 1.5d
-			description: [
-				"{image:flesh_and_steel:textures/banners/industrial.png width:200 height:50 align:center}"
-				"Magic in this world is just another form of high-tier bio-electric energy. By resonating certain crystals, we can bypass the limits of standard engineering."
-			]
+			description: ["Magic in this world is just another form of high-tier bio-electric energy. By resonating certain crystals, we can bypass the limits of standard engineering."]
 			id: "8A1"
 			tasks: [{
 				id: "8B1"
 				type: "item"
 				item: "minecraft:enchanting_table"
 			}]
-			rewards: [{ id: "R_DA1", type: "item", item: "numismatics:silver_coin", count: 16 }]
+			rewards: [{ id: "R_DA1", type: "item", item: "numismatics:bevel", count: 16 }]
 		}
 
 		// --- TIER 1: APOTHEOSIS BASICS ---
@@ -34,7 +31,7 @@
 			dependencies: ["8A1"]
 			id: "SALVAGE"
 			tasks: [{ id: "T_SALV", type: "item", item: "apotheosis:salvaging_table" }]
-			rewards: [{ id: "RD2", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			rewards: [{ id: "RD2", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 		{
 			title: "The Reforging Table"
@@ -44,13 +41,13 @@
 			dependencies: ["SALVAGE"]
 			id: "REFORGE"
 			tasks: [{ id: "T_REF", type: "item", item: "apotheosis:reforging_table" }]
-			rewards: [{ id: "RD3", type: "item", item: "numismatics:silver_coin", count: 4 }]
+			rewards: [{ id: "RD3", type: "item", item: "numismatics:bevel", count: 4 }]
 		}
 
 		// --- TIER 2: GEMOLOGY ---
 		{
 			title: "Crystalline Resonance"
-			icon: "apotheosis:gem"
+			icon: "minecraft:amethyst_shard"
 			x: 3.5d
 			y: 0.0d
 			shape: "hexagon"
@@ -58,7 +55,7 @@
 			dependencies: ["SALVAGE"]
 			id: "GEM_HUB"
 			tasks: [{ id: "GH1", type: "checkmark" }]
-			rewards: [{ id: "RD4", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RD4", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "Gem Cutting"
@@ -68,7 +65,7 @@
 			dependencies: ["GEM_HUB"]
 			id: "GEM_CUT"
 			tasks: [{ id: "T_GCUT", type: "checkmark", title: "Master the Facets" }]
-			rewards: [{ id: "RD5", type: "item", item: "numismatics:silver_coin", count: 8 }]
+			rewards: [{ id: "RD5", type: "item", item: "numismatics:bevel", count: 8 }]
 		}
 		{
 			title: "Sigil of Socketing"
@@ -78,7 +75,7 @@
 			dependencies: ["GEM_HUB"]
 			id: "SOCKET_SIGIL"
 			tasks: [{ id: "T_SSIG", type: "item", item: "apotheosis:sigil_of_socketing" }]
-			rewards: [{ id: "RD6", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			rewards: [{ id: "RD6", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 
 		// --- TIER 3: ADVANCED ENCHANTING ---
@@ -92,7 +89,7 @@
 			dependencies: ["REFORGE"]
 			id: "LIB_HUB"
 			tasks: [{ id: "LH1", type: "checkmark" }]
-			rewards: [{ id: "RD7", type: "item", item: "numismatics:gold_coin", count: 2 }]
+			rewards: [{ id: "RD7", type: "item", item: "numismatics:sun", count: 2 }]
 		}
 		{
 			title: "Hellshelf"
@@ -102,7 +99,7 @@
 			dependencies: ["LIB_HUB"]
 			id: "HELLSHELF"
 			tasks: [{ id: "T_HSH", type: "item", item: "apotheosis:hellshelf" }]
-			rewards: [{ id: "RD8", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RD8", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 		{
 			title: "Seashelf"
@@ -112,7 +109,7 @@
 			dependencies: ["LIB_HUB"]
 			id: "SEASHELF"
 			tasks: [{ id: "T_SSH", type: "item", item: "apotheosis:seashelf" }]
-			rewards: [{ id: "RD9", type: "item", item: "numismatics:gold_coin", count: 1 }]
+			rewards: [{ id: "RD9", type: "item", item: "numismatics:sun", count: 1 }]
 		}
 
 		// --- TIER 4: GODLIKE GEAR ---
@@ -125,7 +122,7 @@
 			dependencies: ["LIB_HUB", "SOCKET_SIGIL"]
 			id: "GODMIND"
 			tasks: [{ id: "T_GOD", type: "checkmark", title: "Ascend the Flesh" }]
-			rewards: [{ id: "RD10", type: "item", item: "numismatics:gold_coin", count: 20 }]
+			rewards: [{ id: "RD10", type: "item", item: "numismatics:sun", count: 20 }]
 		}
 	]
 }
