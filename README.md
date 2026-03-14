@@ -1,4 +1,4 @@
-# 🥩 FLESH & STEEL — VERSION 3.0.0 (THE AAA UPDATE) ⚙️
+# 🥩 FLESH & STEEL — VERSION 3.0.0 (THE AAA UPDATE)
 
 ![Flesh and Steel Logo](kubejs/assets/flesh_and_steel/textures/logo.png)
 
