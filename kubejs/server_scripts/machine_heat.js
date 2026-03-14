@@ -15,7 +15,7 @@ LevelEvents.tick(event => {
         for (let dx = -4; dx <= 4; dx++) {
             for (let dy = -2; dy <= 3; dy++) {
                 for (let dz = -4; dz <= 4; dz++) {
-                    let block = event.level.getBlock(x + dx, y + dy, z + dz);
+                    let block = event.level.getBlock(Math.floor(x + dx), Math.floor(y + dy), Math.floor(z + dz));
                     let id = block.id;
 
                     // Nuclear Reactors: High Heat + High Radiation

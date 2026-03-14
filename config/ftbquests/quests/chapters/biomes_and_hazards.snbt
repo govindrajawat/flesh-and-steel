@@ -22,59 +22,58 @@
 			rewards: [{ id: "ENV_REW_1", type: "item", item: "numismatics:bevel", count: 1 }]
 		}
 		{
-			title: "The Temperature Zones"
+			title: "Temperature Scale [0-10]"
 			icon: "cold_sweat:thermometer"
 			x: 2.0d
 			y: -1.0d
 			description: [
-				"Biomes are split into 4 Temperature bands:"
+				"Biomes are split into a universal 0-10 heat scale:"
 				""
-				"§bVery Cold§r: Below -0.15. Instant Mining Fatigue. Requires Parkas."
-				"§9Cold§r: 0.15 to 0.4. Moderate chill. Lowers your body temp over time."
-				"§fMild§r: 0.45 to 0.8. The human comfort zone."
-				"§cHot§r: Above 0.8. Desert/Savanna heat. Increase thirst pressure."
+				"- §b0-1 [Very Cold]§r: Hypothermia risk. Applies Slowness and Fatigue."
+				"- §92-4 [Cold]§r: Zombie active zone. Stiffness (Fatigue I)."
+				"- §a5-7 [Normal]§r: §2Vitality Zone§r. Provides Regeneration."
+				"- §68-9 [Hot]§r: Fever risk. Weakness + Exhaustion."
+				"- §410 [Very Hot]§r: Heatstroke. Melting (Wither/Poison)."
 			]
 			dependencies: ["ENV_START"]
 			id: "ENV_TEMP"
-			tasks: [{ id: "ENV_TEMP_CHECK", type: "checkmark", title: "Read the Manual" }]
+			tasks: [{ id: "ENV_TEMP_CHECK", type: "checkmark", title: "Study Thermals" }]
 		}
 		{
-			title: "The Radiation Zones"
+			title: "Radiation Scale [0-10]"
 			icon: "radiach:geiger_counter"
 			x: 2.0d
 			y: 1.0d
 			description: [
-				"Radiation is independent of climate. It is invisible but lethal."
+				"Radiation levels are independent of climate:"
 				""
-				"§aNone§r: Plains, Lush Forests, Snowy Mountains."
+				"- §a0-3 [Low]§r: Safe for temporary travel. Lush areas."
+				"- §64-6 [Normal]§r: Hazardous. Hunger and Nausea."
+				"- §c7-8 [High]§r: Lethal. Constant Poison I."
+				"- §49-10 [V.High]§r: Instant Death. Poison II + Wither."
 				""
-				"§eLow§r: Swamps, Jungles, Bogs, Fens, and Mangroves."
-				""
-				"§6Medium§r: Deserts, Badlands, Mesas, and Scrublands."
-				""
-				"§4High§r: Wastelands, Volcanic lands, Corrupted zones, Null biomes, and Abandoned ruins."
+				"§dNote§r: Normal biomes with 0-3 Rad grant §dSaturation§r buffs."
 			]
 			dependencies: ["ENV_START"]
 			id: "ENV_RAD"
 			tasks: [{ id: "ENV_RAD_CHECK", type: "checkmark", title: "Calibrate Geiger" }]
 		}
 		{
-			title: "Hazardous Biome List"
-			icon: "biomesoplenty:volcanic_sand"
+			title: "The Hazard Matrix"
+			icon: "minecraft:wither_skeleton_skull"
 			x: 4.5d
 			y: 1.0d
 			description: [
-				"The following biomes are confirmed to be §4Lethally Irradiated§r regardless of climate:"
+				"When Temperature and Radiation combine, effects mutate:"
 				""
-				"- §4Volcano & Volcanic Plains§r"
-				"- §4Wasteland & Steppe§r"
-				"- §4Withered Abyss§r"
-				"- §4End Corruption / Null Biomes§r"
-				"- §4Quagmires & Dead Forests§r"
+				"- §4Meltdown§r (Hot 10 + High Rad): Wither II + Blindness. Fatal."
+				"- §bVoid§r (Cold 0 + High Rad): Slowness II + Darkness."
+				"- §dGlow§r (Rad 9+): Nausea + Glowing (Constant)."
+				"- §6Fever§r (Hot + Rad 4): Hunger II + Poison I."
 			]
 			dependencies: ["ENV_RAD"]
 			id: "ENV_LIST"
-			tasks: [{ id: "ENV_LIST_CHECK", type: "checkmark", title: "Study the Map" }]
+			tasks: [{ id: "ENV_LIST_CHECK", type: "checkmark", title: "Study Conflicts" }]
 		}
 		{
 			title: "Industrial Biohazards"
@@ -93,18 +92,21 @@
 			tasks: [{ id: "ENV_MACH_CHECK", type: "checkmark", title: "Industrial Safety" }]
 		}
 		{
-			title: "The Safe Havens"
-			icon: "minecraft:grass_block"
+			title: "Environmental Vitality"
+			icon: "minecraft:apple"
 			x: 7.0d
 			y: 0.0d
 			description: [
-				"Pristine biomes like §aPlains§r, §aLush Forests§r, and §aSnowy Mountains§r are usually free of radiation."
+				"Not all environments are hostile. Being in an §aOptimal Zone§r (Temp 5-7, Rad 0-3) provides passive buffs:"
 				""
-				"Establish your primary base in these zones before venturing into the Steel or the Flesh."
+				"- §2Vitality§r: Regeneration I + Haste I."
+				"- §dPurification§r: Saturation I (only at 0 Rad)."
+				""
+				"Establish your primary base here to recover from expeditions."
 			]
 			dependencies: ["ENV_MACHINES", "ENV_LIST"]
 			id: "ENV_SAFE"
-			tasks: [{ id: "ENV_SAFE_CHECK", type: "checkmark", title: "Find Shelter" }]
+			tasks: [{ id: "ENV_SAFE_CHECK", type: "checkmark", title: "Absorb Vitality" }]
 		}
 	]
 }
