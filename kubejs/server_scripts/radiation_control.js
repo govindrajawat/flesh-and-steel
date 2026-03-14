@@ -9,7 +9,7 @@ LevelEvents.tick(event => {
     event.level.players.forEach(player => {
         if (!player) return;
 
-        let radiation = player.getPotionEffect('radiach:radiation');
+        let radiation = player.getEffect('radiach:radiation');
         if (!radiation) return;
 
         // Sample biome and temperature at player position
@@ -24,19 +24,13 @@ LevelEvents.tick(event => {
 
         // Safe / low-radiation zones
         if (temp <= 0.2) {
-            player.removePotionEffect('radiach:radiation');
+            player.removeEffect('radiach:radiation');
             return;
         }
 
         // Clamp radiation strength in milder climates
         if (temp <= 0.6 && radiation.amplifier > 1) {
-            player.addPotionEffect(
-                'radiach:radiation',
-                radiation.duration,
-                1,
-                radiation.ambient,
-                radiation.visible
-            );
+            player.potionEffects.add('radiach:radiation', radiation.duration, 1, radiation.ambient, radiation.visible);
         }
     });
 });

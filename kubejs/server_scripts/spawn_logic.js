@@ -2,7 +2,7 @@ EntityEvents.spawned('minecraft:zombie', event => {
     let { entity, level, x, y, z } = event
     
     // 1. Light Level Check: Zombies only spawn in darkness
-    if (level.getLight(x, y, z) > 7) {
+    if (level.getLightLevel(x, y, z) > 7) {
         event.cancel()
         return
     }
