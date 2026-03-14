@@ -1,0 +1,16 @@
+
+# Radiach Configuration
+
+[radiation]
+	# The rate at which radiation builds up (0.0 to 1.0)
+	# Default: 0.05. We let KubeJS handle the actual logic, 
+	# but we keep this low so it doesn't spike.
+	radiation_gain_rate = 0.02
+	# Maximum radiation level
+	max_radiation = 100
+
+[effects]
+	# Whether to enable the mod's default screen effects
+	# We turn these off as we use KubeJS/Client events for custom smog.
+	enable_vignette = false
+	enable_blur = false

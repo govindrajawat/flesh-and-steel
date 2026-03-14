@@ -1,0 +1,9 @@
+
+# FancyMenu General Options
+
+# Enable menu customization
+enable_customization = true
+# Enable custom main menu
+custom_main_menu = true
+# Default to customization mode
+customization_mode_default = false

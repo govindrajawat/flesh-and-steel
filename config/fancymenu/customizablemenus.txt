@@ -1,0 +1,4 @@
+# Opt-in for screen customization
+minecraft:main_menu=true
+minecraft:multiplayer=true
+minecraft:options=true

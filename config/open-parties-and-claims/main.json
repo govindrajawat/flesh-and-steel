@@ -5,7 +5,9 @@
     "enableGuilds": true
   },
   "parties": {
-    "friendlyFire": false
+    "friendlyFire": false,
+    "enableMapIcons": true,
+    "enableNametags": true
   },
   "guilds": {
     "friendlyFire": false

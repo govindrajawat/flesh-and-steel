@@ -1,0 +1,11 @@
+{
+	"config": {
+		"max_party_size": 4,
+		"autojoin_party": "",
+		"allow_fake_players": true
+	},
+	"client": {
+		"show_nametags": "always",
+		"show_icons_on_map": true
+	}
+}

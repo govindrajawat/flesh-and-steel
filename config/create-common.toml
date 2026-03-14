@@ -1,0 +1,21 @@
+
+# Create Mod Configuration
+
+[infrastructure]
+	# How many ticks between steam engine updates
+	# Set lower for responsiveness in a high-tech pack.
+	boilerUpdateInterval = 10
+
+[logistics]
+	# Limit the length of belts to prevent massive lag
+	maxBeltLength = 64
+
+[stress]
+	# Increase stress capacity slightly to allow for bigger industrial builds
+	capacityMultiplier = 1.2
+	# Speed requirements for some machines
+	minimumSpeedMultiplier = 1.0
+
+[worldgen]
+	# Ensure Andesite is abundant for basic casings
+	andesiteLayerThickness = 12

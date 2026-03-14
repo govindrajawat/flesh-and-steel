@@ -1,0 +1,14 @@
+
+# Zombie Awareness Config
+
+[general]
+	# Max distance zombies can sense blood (default: 64)
+	# Increased to 96 for a more threatening world.
+	max_blood_sense_distance = 96
+	# Max distance zombies can hear sounds (default: 32)
+	# Increased to 48 so machines attract them.
+	max_sound_sense_distance = 48
+	# Whether zombies are attracted to light
+	light_awareness = true
+	# Chance of a random wander towards the player (0.0 to 1.0)
+	random_wander_chance = 0.05

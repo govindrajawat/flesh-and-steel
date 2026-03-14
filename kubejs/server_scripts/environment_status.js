@@ -32,7 +32,8 @@ LevelEvents.tick(event => {
         }
 
         // --- RADIATION EFFECTS: Poison scales with radiation amplifier ---
-        if (radAmp >= 0) {
+        // Only applies in Harsh zones (Hot biomes) where radiation is intended to be active.
+        if (radAmp >= 0 && temp >= 0.85) {
             let poisonAmp = -1;
             // Very low radiation: no poison, just audio/visual cues
             if (radAmp === 1) {

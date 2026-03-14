@@ -1,0 +1,10 @@
+
+# Oh The Biomes You'll Go Configuration
+
+[general]
+	# Whether to enable the mod's custom biomes
+	enable_biomes = true
+
+[worldgen]
+	# Weight of BYG biomes relative to vanilla and other mods
+	biome_weight = 10

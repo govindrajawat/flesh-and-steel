@@ -1,0 +1,11 @@
+{
+  "worldgen": {
+    "generateMeteorites": false
+  },
+  "automation": {
+    "channels": "infinite"
+  },
+  "networking": {
+    "wirelessTerminalRangeMultiplier": 2.0
+  }
+}

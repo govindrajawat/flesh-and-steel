@@ -1,0 +1,19 @@
+
+# Serene Seasons Configuration
+
+[general]
+	# How many days each season lasts (default: 28)
+	season_length = 28
+	# Whether seasons affect the weather (rain frequency, etc.)
+	# In this pack, we set to true to synergy with Weather2.
+	progression_affects_weather = true
+
+[visuals]
+	# Whether to change foliage colors based on the season
+	change_foliage_color = true
+	# Whether to change grass colors based on the season
+	change_grass_color = true
+
+[time]
+	# Whether the day length changes based on the season (longer in summer, shorter in winter)
+	day_length_changes = true

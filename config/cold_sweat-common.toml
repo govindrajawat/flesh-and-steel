@@ -1,0 +1,24 @@
+
+# Common configuration for Cold Sweat
+
+[world_settings]
+	# Whether the player's temperature is affected by the world
+	enable_temperature = true
+	# Whether the player's temperature is affected by blocks
+	enable_block_temperature = true
+	# Whether the player's temperature is affected by biomes
+	enable_biome_temperature = true
+	# The rate at which the player's temperature changes (default: 1.0)
+	temp_change_speed = 1.0
+
+[debuffs]
+	# Whether the player receives debuffs from extreme temperatures
+	enable_debuffs = true
+	# Damage taken from freezing (per 2 seconds)
+	freezing_damage = 1.0
+	# Damage taken from overheating (per 2 seconds)
+	overheating_damage = 1.0
+
+[item_settings]
+	# Whether insulation can be added to armor
+	enable_insulation = true

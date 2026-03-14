@@ -1,0 +1,12 @@
+
+# Biomancy Configuration
+
+[general]
+	# Whether the player can eat "Flesh" items
+	allow_flesh_consumption = true
+	# Speed of the Bio-Forge crafting
+	bio_forge_crafting_speed = 1.0
+
+[mobs]
+	# Spawn rate for Malignants
+	malignant_spawn_chance = 0.08

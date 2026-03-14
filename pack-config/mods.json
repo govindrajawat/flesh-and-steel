@@ -72,10 +72,6 @@
         "name": "Better Combat"
       },
       {
-        "slug": "better-village",
-        "name": "Better village"
-      },
-      {
         "slug": "biomancy",
         "name": "Biomancy"
       },
@@ -428,16 +424,16 @@
         "name": "Towns and Towers"
       },
       {
-        "slug": "travelersbackpack",
-        "name": "Traveler's Backpack"
+        "slug": "sophisticated-backpacks",
+        "name": "Sophisticated Backpacks"
+      },
+      {
+        "slug": "sophisticated-core",
+        "name": "Sophisticated Core"
       },
       {
         "slug": "veinmining",
         "name": "Vein Mining"
-      },
-      {
-        "slug": "villager-names",
-        "name": "Villager Names"
       },
       {
         "slug": "waystones",
@@ -502,6 +498,54 @@
       {
         "slug": "iUheEnjm",
         "name": "Thirst Was Taken"
+      },
+      {
+        "slug": "serene-seasons",
+        "name": "Serene Seasons"
+      },
+      {
+        "slug": "glitchcore",
+        "name": "GlitchCore"
+      },
+      {
+        "slug": "biomes-o-plenty",
+        "name": "Biomes O' Plenty"
+      },
+      {
+        "slug": "oh-the-biomes-weve-gone",
+        "name": "Oh The Biomes We've Gone"
+      },
+      {
+        "slug": "macaws-bridges",
+        "name": "Macaw's Bridges"
+      },
+      {
+        "slug": "atmospheric",
+        "name": "Atmospheric"
+      },
+      {
+        "slug": "environmental",
+        "name": "Environmental"
+      },
+      {
+        "slug": "blueprint",
+        "name": "Blueprint"
+      },
+      {
+        "slug": "wwoo",
+        "name": "William Wythers' Overhauled Overworld"
+      },
+      {
+        "slug": "expanded-ecosphere",
+        "name": "William Wythers' Expanded Ecosphere"
+      },
+      {
+        "slug": "weather-storms-tornadoes",
+        "name": "Weather, Storms, & Tornadoes"
+      },
+      {
+        "slug": "coroutil",
+        "name": "CoroUtil"
       }
     ],
     "client": [
@@ -540,10 +584,6 @@
       {
         "slug": "oculus",
         "name": "Oculus"
-      },
-      {
-        "slug": "simplehats",
-        "name": "SimpleHats"
       },
       {
         "slug": "sound-physics-remastered",

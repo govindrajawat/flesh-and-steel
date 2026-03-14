@@ -1,0 +1,12 @@
+
+# Environmental Configuration
+
+[general]
+	# Whether to enable the mod's custom biomes
+	enable_biomes = true
+
+[worldgen]
+	# Spawn weight for the Marsh biome
+	marsh_spawn_weight = 8
+	# Spawn weight for the Willow Swamp biome
+	willow_swamp_weight = 8

@@ -60,8 +60,9 @@ PlayerEvents.loggedIn((event) => {
         // Give players a starter kit to begin exploring
         player.give('16x minecraft:cooked_beef');
         player.give('32x minecraft:torch');
+        player.give('12x minecraft:potion{Potion:"minecraft:water"}');
         player.give('minecraft:iron_sword');
-        player.give('travelersbackpack:standard');
+        player.give('sophisticatedbackpacks:backpack');
 
         // Welcome message - Using a safe string format to avoid "Text" vs "Component" errors
         player.tell('§aWelcome to Flesh & Steel! Your starter kit has been provided.');

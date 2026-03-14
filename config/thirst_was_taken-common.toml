@@ -1,0 +1,15 @@
+
+# Thirst Was Taken Config
+
+[general]
+	# The maximum thirst level (default: 20)
+	max_thirst = 20
+	# The rate at which thirst decreases (higher = faster)
+	# 1.0 is default, setting to 1.5 for "Brutal" feel.
+	thirst_depletion_multiplier = 1.5
+
+[damage]
+	# Whether the player takes damage when completely thirsty
+	thirst_damage = true
+	# Frequency of thirst damage (in ticks)
+	thirst_damage_frequency = 40

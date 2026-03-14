@@ -1,0 +1,11 @@
+
+# Biomes O' Plenty Configuration
+
+[biomes]
+	# Whether to enable the mod's custom biomes in the overworld
+	enable_overworld_biomes = true
+
+[worldgen]
+	# Frequency of BOP biomes (higher = more often)
+	# 1.0 is default.
+	overworld_biome_frequency = 1.0

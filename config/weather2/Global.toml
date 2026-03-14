@@ -1,0 +1,21 @@
+
+# Weather, Storms, & Tornadoes - Global Config
+
+[weather]
+	# Whether tornadoes can destroy blocks
+	# Set to false by default for player protection, can be enabled.
+	tornado_block_destruction = false
+	# Max number of active tornadoes in the world
+	max_tornadoes = 1
+	# Frequency of storms (higher = more often)
+	storm_frequency = 1.0
+
+[wind]
+	# Whether wind affects particles and trees
+	enable_wind_effects = true
+
+[particles]
+	# Density of localized rain particles
+	rain_particle_density = 1.0
+	# Whether to show leaf particles in high wind
+	leaf_particles = true

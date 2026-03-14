@@ -1,0 +1,11 @@
+
+# Mutant Monsters Configuration
+
+[mobs]
+	# Chance for a normal monster to spawn as a Mutant (default: 0.01)
+	# Increased to 0.02 for a more dangerous world.
+	mutant_spawn_chance = 0.02
+
+[drops]
+	# Whether mutants drop Chemical X
+	drop_chemical_x = true

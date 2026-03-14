@@ -1,0 +1,12 @@
+
+# Atmospheric Configuration
+
+[general]
+	# Whether to enable the mod's custom biomes
+	enable_biomes = true
+
+[worldgen]
+	# Spawn weight for the Dunes biome
+	dunes_spawn_weight = 10
+	# Spawn weight for the Rainforest biome
+	rainforest_spawn_weight = 10

@@ -1,0 +1,15 @@
+
+# Cold Sweat World Settings
+
+[biomes]
+	# Biome temperature offsets
+	"minecraft:plains" = 0.0
+	"minecraft:desert" = 2.0
+	"minecraft:ice_spikes" = -2.0
+
+[blocks]
+	# Block temperature offsets
+	"minecraft:torch" = 0.2
+	"minecraft:campfire" = 1.0
+	"create:steam_engine" = 1.5
+	"createnuclear:reactor_casing" = 3.0

@@ -1,0 +1,11 @@
+
+# Alex's Mobs Config
+
+[mobs]
+	# Chance for a mob to be a "Caged" version
+	# (Thematic for this pack)
+	caged_mob_chance = 0.1
+
+[spawn_biomes]
+	# Ensure monsters don't spawn in "Safe" biomes too much
+	"alexsmobs:bone_serpent" = ["minecraft:nether_wastes"]
