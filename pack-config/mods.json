@@ -24,8 +24,12 @@
         "name": "Additional Attributes"
       },
       {
-        "slug": "advanced-netherite",
-        "name": "Advanced Netherite"
+        "slug": "tetra",
+        "name": "Tetra"
+      },
+      {
+        "slug": "mutil",
+        "name": "mutil"
       },
       {
         "slug": "azurelib",
@@ -136,8 +140,8 @@
         "name": "Cold Sweat"
       },
       {
-        "slug": "radiach",
-        "name": "Radiach"
+        "slug": "radioactive",
+        "name": "Radioactive"
       },
       {
         "slug": "create",
@@ -488,8 +492,12 @@
         "name": "YetAnotherConfigLib"
       },
       {
-        "slug": "zombie-awareness",
-        "name": "Zombie Awareness"
+        "slug": "enhancedai",
+        "name": "Enhanced AI"
+      },
+      {
+        "slug": "insaneau",
+        "name": "InsaneLib"
       },
       {
         "slug": "spark",
@@ -528,14 +536,6 @@
         "name": "Macaw's Bridges"
       },
       {
-        "slug": "atmospheric",
-        "name": "Atmospheric"
-      },
-      {
-        "slug": "environmental",
-        "name": "Environmental"
-      },
-      {
         "slug": "blueprint",
         "name": "Blueprint"
       },
@@ -544,12 +544,48 @@
         "name": "Weather, Storms, & Tornadoes"
       },
       {
-        "slug": "weather-storms-tornadoes",
-        "name": "Weather, Storms, & Tornadoes"
-      },
-      {
         "slug": "coroutil",
         "name": "CoroUtil"
+      },
+      {
+        "slug": "atmospheric",
+        "name": "Atmospheric"
+      },
+      {
+        "slug": "environmental",
+        "name": "Environmental"
+      },
+      {
+        "slug": "create_bio_factory",
+        "name": "Create: Bio-Factory"
+      },
+      {
+        "slug": "sophisticated-storage",
+        "name": "Sophisticated Storage"
+      },
+      {
+        "slug": "immediatelyfast",
+        "name": "ImmediatelyFast"
+      },
+      {
+        "slug": "canary",
+        "name": "Canary"
+      },
+      {
+        "slug": "presence-footsteps-forge",
+        "name": "Presence Footsteps"
+      },
+      {
+        "slug": "particular-reforged",
+        "name": "Effective"
+      },
+      {
+        "slug": "ambientsounds",
+        "name": "AmbientSounds"
+      },
+      {
+        "slug": "ambient-environment",
+        "name": "Ambient Environment"
       }
     ],
     "client": [

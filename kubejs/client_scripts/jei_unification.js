@@ -12,7 +12,4 @@ JEIEvents.hideItems(event => {
     // event.hide('naturescompass:natures_compass') // If we replaced it with a different one
 })
 
-// Hide categories that might be confusing or irrelevant
-JEIEvents.hideCategories(event => {
-    // event.hide('some_mod:confusing_category')
-})
+

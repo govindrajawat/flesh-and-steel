@@ -1,75 +1,56 @@
-// Client-side environment status HUD for Flesh & Steel
-// Optimized for independent Temperature and Radiation tracking.
+// Client-side HUD for Flesh & Steel - Radioactive Mod Edition
+// Displays Temperature and Radiation scales (0-10) in the GUI.
 
 let fs_env_status = {
     text: '',
-    color: 0xffffff,
 };
 
 ClientEvents.tick(event => {
     const player = event.player;
     if (!player) return;
 
-    const level = player.level;
-    if (!level) return;
+    // Retrieve scales stored in persistentData by radiation_control.js
+    const tScale = player.persistentData.getInt('tempScale') || 5;
+    const rScale = player.persistentData.getInt('radScale') || 0;
 
-    let pos = player.blockPosition();
-    let biome = level.getBiome(pos).value();
-    // --- UNIVERSAL 10-POINT HUD ---
-    
-    // 1. Temperature Calculation (Standardized with Server)
-    let tScale = 5;
-    let tColor = '§7';
-    let tLabel = 'Normal';
-    if (temp <= -0.2) { tScale = 0; tColor = '§b'; tLabel = 'V.Cold'; }
-    else if (temp < 0) { tScale = 1; tColor = '§3'; tLabel = 'V.Cold'; }
-    else if (temp <= 0.2) { tScale = 2; tColor = '§9'; tLabel = 'Cold'; }
-    else if (temp <= 0.4) { tScale = 4; tColor = '§1'; tLabel = 'Cold'; }
-    else if (temp <= 0.7) { tScale = 6; tColor = '§a'; tLabel = 'Normal'; }
-    else if (temp <= 0.9) { tScale = 8; tColor = '§6'; tLabel = 'Hot'; }
-    else if (temp <= 1.2) { tScale = 9; tColor = '§c'; tLabel = 'Hot'; }
-    else { tScale = 10; tColor = '§4'; tLabel = 'V.Hot'; }
+    // 1. Temperature Labeling
+    let tColor = '§a'; let tLabel = 'Norm';
+    if (tScale <= 1) { tColor = '§b'; tLabel = 'V.Cold'; }
+    else if (tScale <= 4) { tColor = '§9'; tLabel = 'Cold'; }
+    else if (tScale >= 9) { tColor = '§4'; tLabel = 'V.Hot'; }
+    else if (tScale >= 8) { tColor = '§6'; tLabel = 'Hot'; }
 
-    // 2. Radiation Calculation (Standardized with Server)
-    const rad = player.getPotionEffect('radiach:radiation');
-    let rScale = rad ? (rad.amplifier + 1) * 2 : 0;
-    let rColor = '§f';
-    let rLabel = 'Low';
-    
-    if (rScale == 0) { rColor = '§a'; rLabel = 'Safe'; }
-    else if (rScale <= 3) { rColor = '§e'; rLabel = 'Low'; }
-    else if (rScale <= 6) { rColor = '§6'; rLabel = 'Normal'; }
-    else if (rScale <= 8) { rColor = '§c'; rLabel = 'High'; }
-    else { rColor = '§4'; rLabel = 'V.High'; }
+    // 2. Radiation Labeling
+    let rColor = '§a'; let rLabel = 'Safe';
+    if (rScale >= 9) { rColor = '§5'; rLabel = 'LETHAL'; }
+    else if (rScale >= 7) { rColor = '§c'; rLabel = 'HEAVY'; }
+    else if (rScale >= 4) { rColor = '§6'; rLabel = 'WARN'; }
+    else if (rScale >= 1) { rColor = '§e'; rLabel = 'LOW'; }
 
-    // 3. Hazard Matrix Display & Labeling
+    // 3. Status Matrix
     let status = '';
-    if (tScale >= 8 && rScale >= 7) status = ' §k| §4LETHAL'; // Nuclear Fire
-    else if (tScale <= 1 && rScale >= 7) status = ' §b| §8VOID'; // Freezing Cold
-    else if (rScale >= 9) status = ' §4| MELTDOWN';
-    else if (tScale >= 5 && tScale <= 7 && rScale <= 3) status = ' §2| VITALITY'; // Buff active
-    else if (rScale == 0 && tScale >= 5 && tScale <= 7) status = ' §d| OPTIMAL';
+    if (tScale >= 5 && tScale <= 7 && rScale <= 3) {
+        status = ' §k| §2§lVITALITY';
+    } else if (rScale >= 7 || tScale >= 9 || tScale <= 1) {
+        status = ' §k| §c§lHAZARD';
+    }
 
-    let tempText = `${tColor}Temp: ${tScale}/10`;
-    let radText = `${rColor}Rad: ${rScale}/10`;
+    const tempPart = `${tColor}Temp: ${tScale}/10`;
+    const radPart = `${rColor}Rad: ${rScale}/10`;
 
-    fs_env_status.text = `§7[ ${tempText}  §7|  ${radText} §7]${status}`;
+    fs_env_status.text = `§7[ ${tempPart}  §7|  ${radPart} §7]${status}`;
 });
 
-RenderEvents.overlay(event => {
-    const mc = event.minecraft;
-    const gui = event.getGuiGraphics();
-    const font = mc.font;
-
-    const width = event.getWindow().getGuiScaledWidth();
-    const height = event.getWindow().getGuiScaledHeight();
+ClientEvents.paintScreen(event => {
+    const width = event.graphics.guiScaledWidth;
+    const height = event.graphics.guiScaledHeight;
     const textWidth = font.width(fs_env_status.text);
 
-    // Bottom-center positioning (above hotbar)
+    // Position at top center
     const x = (width - textWidth) / 2;
-    const y = height - 55; // Elevated above the hotbar items
+    const y = 10; 
     
-    // Slight shadow rect for readability
-    gui.fill(x - 2, y - 2, x + textWidth + 2, y + 10, 0x88000000);
+    // Background shadow for readability
+    gui.fill(x - 4, y - 4, x + textWidth + 4, y + 10, 0xCC111111);
     gui.drawString(font, fs_env_status.text, x, y, 0xFFFFFF, false);
 });

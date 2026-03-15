@@ -156,7 +156,16 @@ def resolve_mods(config, sides, mods_dir):
     log_lines = []
     processed = set()
 
-    print(f"\n📦 Resolving {len(all_mods_to_resolve)} mods for sides: {sides}...\n")
+    print(f"\n📦 Cleaning old mods and resolving {len(all_mods_to_resolve)} mods for sides: {sides}...\n")
+
+    # Clean directories to prevent duplicate versions or lingering removed mods
+    for side in sides:
+        target_dir = mods_dir / side
+        if target_dir.exists():
+            for f in target_dir.glob("*.jar"):
+                f.unlink()
+            for f in target_dir.glob("*.zip"): # For mods that mistakenly download as zip
+                f.unlink()
 
     for slug, name, side in all_mods_to_resolve:
         if slug in processed:

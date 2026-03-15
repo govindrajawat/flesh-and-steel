@@ -1,6 +1,6 @@
 {
 	id: "AAAAAAAAAAAAAAAA"
-	title: "Chapter 11: Logistics & Storage"
+	title: "Chapter 11: Logistics and Storage"
 	icon: "toms_storage:ts_storage_terminal"
 	filename: "logistics_and_storage"
 	order_index: 12

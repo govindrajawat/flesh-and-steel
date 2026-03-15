@@ -1,6 +1,6 @@
 {
 	id: "B101010101010101"
-	title: "Chapter 13: Biomechanical Engineering"
+	title: "Chapter 4: Biomechanical Engineering"
 	icon: "biomancy:flesh_block"
 	filename: "biomechanical_engineering"
 	order_index: 5
@@ -12,7 +12,7 @@
 			y: 0.0d
 			shape: "gear"
 			size: 2.0d
-			description: ["This is the heart of Flesh & Steel. Here, we marry the cold logic of the machine with the warm adaptability of life."]
+			description: ["This is the heart of Flesh and Steel. Here, we marry the cold logic of the machine with the warm adaptability of life."]
 			id: "SYNERGY_START"
 			tasks: [{ id: "S1", type: "checkmark", title: "Accept the Merger" }]
 		}

@@ -14,7 +14,7 @@ EntityEvents.spawned('minecraft:zombie', event => {
     // Temperature check: Cold-Dwelling mutants only spawn in cold/mild biomes.
     // We use dynamic temperature to support 100+ modded biomes from BOP/BYG automatically.
     let biome = level.getBiome(pos);
-    let temp = biome.getTemperature(pos);
+    let temp = biome.value().getTemperature(pos);
     
     // If it's too warm (> 0.4 represents mild/hot climates), cancel the spawn.
     if (temp > 0.4) {

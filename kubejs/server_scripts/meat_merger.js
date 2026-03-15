@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
         'A'
     ], {
         A: 'create:andesite_alloy',
-        B: 'biomancy:bone_fragment'
+        B: 'biomancy:bone_fragments'
     })
 
     // Cogwheels (Small) require sinew
@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
         'BCB',
         ' B '
     ], {
-        B: 'biomancy:bone_fragment',
+        B: 'biomancy:bone_fragments',
         C: 'create:cogwheel'
     })
 

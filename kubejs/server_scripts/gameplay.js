@@ -15,69 +15,72 @@ ServerEvents.recipes((event) => {
     }).id('flesh_and_steel:cheap_waystone');
 
     // Remove original compass recipes to avoid duplicates
-    event.remove({ id: 'explorerscompass:explorer_compass' })
-    event.remove({ id: 'naturescompass:nature_compass' })
-
-
+    event.remove({ id: 'explorerscompass:explorerscompass' })
+    event.remove({ id: 'naturescompass:naturescompass' })
 
     // Allow crafting simple compasses (for navigation mods)
-    event.shaped('explorerscompass:explorers_compass', [
+    event.shaped('explorerscompass:explorerscompass', [
         ' I ',
         'ICI',
         ' I ',
     ], {
         I: 'minecraft:iron_ingot',
         C: 'minecraft:compass',
-    }).id('flesh_and_steel:explorer_compass');
+    }).id('flesh_and_steel:explorers_compass_fixed');
 
-    event.shaped('naturescompass:natures_compass', [
+    event.shaped('naturescompass:naturescompass', [
         ' I ',
         'ILI',
         ' I ',
     ], {
         I: 'minecraft:iron_ingot',
         L: 'minecraft:oak_leaves',
-    }).id('flesh_and_steel:nature_compass');
+    }).id('flesh_and_steel:natures_compass_fixed');
 });
 
 // ============================================================
 // FLESH & STEEL - Starting Items for New Players
 // Give players a better start so they can explore immediately
 // ============================================================
+// Safe Give function moved to a standard function declaration to prevent redeclaration errors
+function giveSafe(player, item, count) {
+    try {
+        let stack = Item.of(item, count || 1);
+        player.give(stack);
+    } catch (e) {
+        console.log(`Failed to give starter item ${item}: ${e}`);
+    }
+}
+
 PlayerEvents.loggedIn(event => {
     const { player } = event;
 
     if (!player.persistentData.contains('flesh_steel_starter_given')) {
         player.persistentData.putBoolean('flesh_steel_starter_given', true);
 
-        // Robust Starter Kit: Give each item safely to prevent script crashes
-        const giveSafe = (item, count) => {
-            try {
-                if (count > 1) {
-                    player.give(`${count}x ${item}`);
-                } else {
-                    player.give(item);
-                }
-            } catch (e) {
-                console.log(`Failed to give starter item ${item}: Mod might be missing.`);
-            }
-        };
-
-        giveSafe('minecraft:cooked_beef', 16);
-        giveSafe('minecraft:torch', 32);
+        giveSafe(player, 'minecraft:cooked_beef', 16);
+        giveSafe(player, 'minecraft:torch', 32);
+        giveSafe(player, 'minecraft:iron_sword', 1);
         
-        // Potion handling (NBT can be tricky in KJS 1.20.1)
+        // Potion handling (KJS 6 preferred object NBT)
         try {
-            player.give(Item.of('minecraft:potion', 12, '{Potion:"minecraft:water"}'));
+            player.give(Item.of('minecraft:potion', {Potion: "minecraft:water"}).withCount(12));
         } catch (e) {
-            console.log("Failed to give water potions.");
+            console.log("Failed to give water potions: " + e);
         }
 
-        giveSafe('minecraft:iron_sword', 1);
-
-        // Sophisticated Backpacks was missing, replacing with a Vanilla alternative if needed 
-        // Or simply omitting if no backpack mod is present.
+        giveSafe(player, 'sophisticatedbackpacks:backpack', 1);
         
+        // Basic firearm (Start with a handgun for that AAA feel)
+        try {
+            player.give('pointblank:m1911a1');
+            // Trying multiple likely IDs since the exact one is hard to find without JEI
+            player.give(Item.of('pointblank:bullet_45acp', 32));
+            player.give(Item.of('pointblank:ammo_45acp', 32));
+            player.give(Item.of('pointblank:gunmetal_ingot', 4)); // In case ammo IDs fail, they can craft some
+        } catch (e) {
+            console.log("Failed to give starting weapon: " + e);
+        }
         player.tell('§aWelcome to Flesh & Steel! Your starter kit has been provided.');
     }
 });

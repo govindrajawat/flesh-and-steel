@@ -3,7 +3,7 @@
 
 [combat]
 	# Damage multiplier for all firearms
-	damage_multiplier = 1.0
+	damage_multiplier = 1.2
 	# Recoil multiplier
 	recoil_multiplier = 1.0
 

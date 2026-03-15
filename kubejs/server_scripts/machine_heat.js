@@ -41,13 +41,13 @@ LevelEvents.tick(event => {
         // Apply Heat (Cold Sweat)
         if (heatScore > 0) {
             let amp = heatScore >= 12 ? 2 : (heatScore >= 6 ? 1 : 0);
-            player.addPotionEffect('cold_sweat:heat', 60, amp, false, false);
+            player.potionEffects.add('cold_sweat:heat', 60, amp, false, false);
         }
 
-        // Apply Radiation (Radiach)
+        // Apply Radiation (Radioactive mod)
         if (radiationScore > 0) {
             let amp = radiationScore >= 15 ? 2 : (radiationScore >= 5 ? 1 : 0);
-            player.addPotionEffect('radiach:radiation', 60, amp, false, false);
+            player.potionEffects.add('radioactive:radiation', 60, amp, false, false);
         }
     });
 });

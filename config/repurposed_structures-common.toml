@@ -4,31 +4,31 @@
 [structures]
     [structures.mineshafts]
         # Increased frequency - find mineshafts more often
-        mineshaft_spacing = 16
-        mineshaft_separation = 8
+        mineshaft_spacing = 12
+        mineshaft_separation = 6
 
     [structures.strongholds]
         # More strongholds spread across the world
-        stronghold_distance = 24
-        stronghold_count = 256
+        stronghold_distance = 16
+        stronghold_count = 512
 
     [structures.villages]
         # Villages in more biomes
-        plains_village_spacing = 24
-        plains_village_separation = 8
-        desert_village_spacing = 24
-        desert_village_separation = 8
-        savanna_village_spacing = 24
-        savanna_village_separation = 8
-        taiga_village_spacing = 24
-        taiga_village_separation = 8
-        snowy_village_spacing = 24
-        snowy_village_separation = 8
+        plains_village_spacing = 18
+        plains_village_separation = 6
+        desert_village_spacing = 18
+        desert_village_separation = 6
+        savanna_village_spacing = 18
+        savanna_village_separation = 6
+        taiga_village_spacing = 18
+        taiga_village_separation = 6
+        snowy_village_spacing = 18
+        snowy_village_separation = 6
 
     [structures.outposts]
-        plains_outpost_spacing = 20
-        plains_outpost_separation = 8
+        plains_outpost_spacing = 16
+        plains_outpost_separation = 6
 
     [structures.shipwrecks]
-        shipwreck_spacing = 18
-        shipwreck_separation = 8
+        shipwreck_spacing = 14
+        shipwreck_separation = 6

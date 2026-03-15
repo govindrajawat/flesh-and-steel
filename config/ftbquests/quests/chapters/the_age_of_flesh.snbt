@@ -24,7 +24,7 @@
 			description: ["Structural frames for biological tools."]
 			dependencies: ["3A"]
 			id: "B_FRAG"
-			tasks: [{ id: "T_FRAG", type: "item", item: "biomancy:bone_fragment" }]
+			tasks: [{ id: "T_FRAG", type: "item", item: "biomancy:bone_fragments" }]
 			rewards: [{ id: "RF1", type: "item", item: "numismatics:bevel", count: 4 }]
 		},
 		{
