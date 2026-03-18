@@ -276,10 +276,6 @@
         "name": "Smooth Boot Reloaded"
       },
       {
-        "slug": "connectivity",
-        "name": "Connectivity"
-      },
-      {
         "slug": "ai-improvements",
         "name": "AI Improvements"
       },
@@ -304,24 +300,12 @@
         "name": "CrashExploitFixer"
       },
       {
-        "slug": "long-nbt-killer",
-        "name": "Long NBT Killer"
-      },
-      {
         "slug": "alltheleaks",
         "name": "AllTheLeaks - Memory Leak Fix"
       },
       {
         "slug": "let-me-despawn",
         "name": "Let Me Despawn"
-      },
-      {
-        "slug": "krypton-reforged",
-        "name": "Krypton Reforged"
-      },
-      {
-        "slug": "fastsuite",
-        "name": "FastSuite"
       },
       {
         "slug": "fast-paintings",
@@ -430,10 +414,6 @@
       {
         "slug": "nuclear-science",
         "name": "Nuclear Science"
-      },
-      {
-        "slug": "semi-realistic-nuclear-reactors",
-        "name": "Semi-Realistic Nuclear Reactors"
       },
       {
         "slug": "electrodynamics",
@@ -612,10 +592,6 @@
         "name": "Apotheosis Modern Ragnarok"
       },
       {
-        "slug": "apotheotic-additions",
-        "name": "Apotheotic Additions"
-      },
-      {
         "slug": "apotheosis-mix",
         "name": "Apotheosis Mix"
       },
@@ -634,10 +610,6 @@
       {
         "slug": "rar-compat",
         "name": "Relics: Artifacts Compat"
-      },
-      {
-        "slug": "fuzes-relics",
-        "name": "Fuze's Relics"
       },
       {
         "slug": "ancient-reforging",
@@ -664,16 +636,8 @@
         "name": "Spice of Life: Carrot Edition"
       },
       {
-        "slug": "voidscape",
-        "name": "Voidscape"
-      },
-      {
         "slug": "shadowlands",
         "name": "Shadowlands"
-      },
-      {
-        "slug": "the-twilight-forest",
-        "name": "The Twilight Forest"
       },
       {
         "slug": "incendium",
@@ -820,10 +784,6 @@
         "name": "No Farmland Trample"
       },
       {
-        "slug": "alwayseat",
-        "name": "AlwaysEat"
-      },
-      {
         "slug": "boat-break-fix",
         "name": "Boat Break Fix"
       },
@@ -952,10 +912,6 @@
         "name": "Third Person Shooting: Zero"
       },
       {
-        "slug": "repurposed_structures",
-        "name": "Repurposed Structures"
-      },
-      {
         "slug": "l7YxzukZ",
         "name": "Sons of Sins"
       },
@@ -996,19 +952,11 @@
         "name": "No Chat Reports"
       },
       {
-        "slug": "smsn",
-        "name": "Save My Shaky Network"
-      },
-      {
         "slug": "crash-assistant",
         "name": "Crash Assistant"
       }
     ],
     "client": [
-      {
-        "slug": "embeddium",
-        "name": "Embeddium"
-      },
       {
         "slug": "oculus",
         "name": "Oculus"
@@ -1236,10 +1184,6 @@
       {
         "slug": "rawsvisualkeybinder",
         "name": "Raw's Visual Keybinder"
-      },
-      {
-        "slug": "nonconflictkeys",
-        "name": "NonConflictKeys"
       }
     ],
     "server": []
